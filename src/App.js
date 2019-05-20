@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AppBar from "./components/AppBar";
+import {Redirect, Route, Switch} from "react-router-dom";
+import List from "./pages/list/List";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    people : []
+  };
+
+  componentDidMount() {
+    fetch('/api/people')
+      .then(res => res.json())
+      .then(people => this.setState({ people }));
+  }
+
+  render() {
+    const { people } = this.state;
+
+    return (
+      <div className="App">
+        <header>
+          <AppBar />
+        </header>
+        <main>
+          <Switch>
+            <Route path="/list" component={ List } list={ people } />
+            <Redirect to="/list" />
+          </Switch>
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
