@@ -24,3 +24,5 @@ yarn-error.log*
 
 .idea
 *.iml
+public/photos/female/*.jpg
+public/photos/male/*.jpg

@@ -2,11 +2,292 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4282595-a7aa-4ef3-bdc0-6f0217293c14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/search-input/SearchInput.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search-input/SearchInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/list-people/ListPeople.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/curl.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/101.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/102.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/103.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/104.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/105.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/106.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/107.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/109.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/112.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/113.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/114.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/115.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/117.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/118.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/121.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/122.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/124.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/125.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/60.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/67.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/69.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/71.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/72.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/73.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/74.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/75.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/76.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/78.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/79.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/80.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/81.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/82.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/84.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/85.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/86.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/87.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/88.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/89.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/90.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/91.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/92.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/93.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/94.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/95.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/96.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/97.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/98.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/female/99.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/101.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/102.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/103.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/104.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/105.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/106.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/107.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/109.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/112.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/113.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/114.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/115.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/117.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/118.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/121.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/122.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/124.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/125.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/60.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/67.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/69.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/71.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/72.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/73.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/74.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/75.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/76.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/78.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/79.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/80.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/81.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/82.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/84.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/85.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/86.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/87.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/88.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/89.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/90.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/91.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/92.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/93.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/94.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/95.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/96.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/97.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/98.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/99.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/photos/male/9999.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/bg-profile-intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/allemagne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/angleterre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/arabie-saoudite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/belgique.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/bresil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/canada.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/coree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/egypte.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/france.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/grece.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/inde.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/italie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/japon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/klingon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/resources/images/icones/swaziland.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/style/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/person-type.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/people.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/people.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/PersonCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/PersonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search-input/SearchInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list-people/components/search-input/SearchInput.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search-input/SearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list-people/components/search-input/SearchInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/list-people/ListPeople.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list-people/ListPeople.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,10 +306,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+            <state relative-caret-position="238">
+              <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -37,19 +318,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/filter/FilteredList.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/list-people/ListPeople.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="333">
+              <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -58,28 +330,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/list-people/ListPeople.css">
+        <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            <state relative-caret-position="17">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/search-input/SearchInput.css">
+        <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/search-input/SearchInput.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="170">
+              <caret line="94" column="49" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="49" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -87,11 +350,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.css">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+            <state relative-caret-position="418">
+              <caret line="187" column="27" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/style/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/types/person-type.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -112,10 +411,30 @@
       <find>firstname</find>
       <find>lastname</find>
       <find>SimpleCard</find>
+      <find>___</find>
+      <find>people_dialog</find>
+      <find>head_img</find>
+      <find>&quot;name&quot;:</find>
+      <find>name</find>
+      <find>surname</find>
+      <find>&quot;name&quot;</find>
+      <find>skillMap</find>
+      <find>&quot;surname&quot;</find>
+      <find>&lt;Icon</find>
+      <find>person-dialog__icon</find>
+      <find>h1</find>
+      <find>people</find>
+      <find>.icon</find>
     </findStrings>
     <replaceStrings>
-      <replace>lastName</replace>
       <replace>TestCard</replace>
+      <replace>person-dialog</replace>
+      <replace>people-dialog</replace>
+      <replace>head-img</replace>
+      <replace>lastName</replace>
+      <replace>&quot;firstName&quot;</replace>
+      <replace>person</replace>
+      <replace>&quot;lastName&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -130,9 +449,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/setupProxy.js" />
         <option value="$PROJECT_DIR$/src/pages/list/List.jsx" />
-        <option value="$PROJECT_DIR$/data/people.json" />
         <option value="$PROJECT_DIR$/src/components/app-bar/AppBar.jsx" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/card/TestCard.jsx" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/card/PersonCard.css" />
@@ -141,12 +458,24 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/app-bar/HeaderBar.jsx" />
         <option value="$PROJECT_DIR$/src/components/app-bar/HeaderBar.css" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/pages/list-people/ListPeople.css" />
         <option value="$PROJECT_DIR$/src/components/search-input/SearchInput.css" />
         <option value="$PROJECT_DIR$/src/components/search-input/SearchInput.js" />
+        <option value="$PROJECT_DIR$/src/common.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/.babelrc" />
+        <option value="$PROJECT_DIR$/jsconfig.json" />
+        <option value="$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.css" />
         <option value="$PROJECT_DIR$/src/pages/list-people/ListPeople.jsx" />
+        <option value="$PROJECT_DIR$/src/types/person-type.js" />
+        <option value="$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.js" />
+        <option value="$PROJECT_DIR$/data/people.json" />
+        <option value="$PROJECT_DIR$/public/style/style.css" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.css" />
       </list>
     </option>
   </component>
@@ -186,20 +515,23 @@
             <path>
               <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-101" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-101" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-101" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-101" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-101" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="search-input" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
@@ -214,6 +546,38 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="list-people" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-101" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="list-people" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-101" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="list-people" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="person-card" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-101" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="list-people" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="person-dialog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-101" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-101" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -224,22 +588,26 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/search-input" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personnel\react-101\public" />
+      <recent name="D:\personnel\react-101\src\pages\list-people\components\person-dialog" />
       <recent name="D:\personnel\react-101\src\components\search-input" />
       <recent name="D:\personnel\react-101\src\components\card" />
       <recent name="D:\personnel\react-101\src\components\PersonCard" />
-      <recent name="D:\personnel\react-101\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\personnel\react-101\src\components\card" />
-      <recent name="D:\personnel\react-101\src\components\AppBar" />
+      <recent name="D:\personnel\react-101\src" />
+      <recent name="D:\personnel\react-101\src\pages\types" />
+      <recent name="D:\personnel\react-101\src\pages\list-people\components\person-card" />
+      <recent name="D:\personnel\react-101\src\pages" />
+      <recent name="D:\personnel\react-101\src\pages\list-people\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,18 +646,18 @@
       <updated>1558357869386</updated>
       <workItem from="1558357872390" duration="6356000" />
       <workItem from="1558366438500" duration="1023000" />
-      <workItem from="1558420581625" duration="8811000" />
+      <workItem from="1558420581625" duration="21190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16190000" />
+    <option name="totallyTimeSpent" value="28569000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -299,7 +667,7 @@
       <window_info id="npm" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,20 +720,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/person-card/index.js" />
     <entry file="file://$PROJECT_DIR$/src/components/card/Card.js" />
     <entry file="file://$PROJECT_DIR$/src/components/card/Card.css" />
-    <entry file="file://$PROJECT_DIR$/data/people.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -407,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/PersonCard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app-bar/HeaderBar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -431,27 +778,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/PersonCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -465,7 +795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/search-input/SearchInput.css">
+    <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/search-input/SearchInput.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
@@ -479,7 +809,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/search-input/SearchInput.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/search-input/SearchInput.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
@@ -489,13 +819,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/list-people/ListPeople.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="333">
+          <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/people.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/person-type.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-card/PersonCard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="94" column="49" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/list-people/components/person-dialog/PersonDialog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="187" column="27" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
         </state>
       </provider>
     </entry>

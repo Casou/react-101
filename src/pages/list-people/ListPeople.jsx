@@ -1,14 +1,17 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import PersonCard from "../../components/card/PersonCard";
-import SearchInput from "../../components/search-input/SearchInput";
+import PersonCard from "./components/person-card/PersonCard";
+import SearchInput from "./components/search-input/SearchInput";
 
 import './ListPeople.css';
+import PersonDialog from "./components/person-dialog/PersonDialog";
 
 class ListPeople extends React.Component {
 
 	state = {
-		searchText: ""
+		searchText: "",
+		selectedPerson: null,
+		dialogOpen : false
 	};
 
 	searchChanged = (e) => {
@@ -26,8 +29,16 @@ class ListPeople extends React.Component {
 		return people.filter(p => p.firstName.indexOf(searchText) >= 0 || p.lastName.indexOf(searchText) >= 0);
 	};
 
+	openDialog = (person) => {
+		this.setState({ dialogOpen : true, selectedPerson: person });
+	};
+
+	closeDialog = () => {
+		this.setState({ dialogOpen : false });
+	};
+
 	render() {
-		const { searchText } = this.state;
+		const { searchText, dialogOpen, selectedPerson } = this.state;
 
 		return (
 			<Fragment>
@@ -35,9 +46,21 @@ class ListPeople extends React.Component {
 										 value={searchText}
 										 onChange={this.searchChanged}
 				/>
-				<section id={"list-people"}>
-					{ this.getFilteredPeople().map(p => <PersonCard person={p} key={ p.id } /> )}
-				</section>
+
+				<article id={"list-people"}>
+					{
+						this.getFilteredPeople().map(p =>
+							<PersonCard key={ p.id }
+													person={p}
+													onClick={this.openDialog}
+							/>)
+					}
+				</article>
+
+				<PersonDialog handleClose={this.closeDialog}
+											open={dialogOpen}
+											person={selectedPerson}
+				/>
 			</Fragment>
 		);
 	}
