@@ -1,0 +1,9 @@
+.search-input {
+  display : inline-block;
+  width: 400px;
+  margin-bottom : 10px;
+}
+
+.search-input-root {
+  width : 100%;
+}
