@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import AppBar from "./components/AppBar";
+import HeaderBar from "./components/app-bar/HeaderBar";
 import {Redirect, Route, Switch} from "react-router-dom";
-import List from "./pages/list/List";
+import ListPeople from "./pages/list-people/ListPeople";
 
 class App extends React.Component {
 
@@ -13,7 +13,9 @@ class App extends React.Component {
   componentDidMount() {
     fetch('/api/people')
       .then(res => res.json())
-      .then(people => this.setState({ people }));
+      .then(people => {
+        this.setState({ people })
+      });
   }
 
   render() {
@@ -22,11 +24,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <AppBar />
+          <HeaderBar />
         </header>
         <main>
           <Switch>
-            <Route path="/list" component={ List } list={ people } />
+            <Route path="/list" component={() => <ListPeople people={ people } />} />
             <Redirect to="/list" />
           </Switch>
         </main>

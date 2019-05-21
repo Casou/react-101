@@ -1,11 +1,14 @@
-.AppBar {
+.HeaderBar {
 	background-color: #275aab;
+	color: white;
+	font-weight : bold;
+
+	/*
 	background-repeat: no-repeat;
 	background-position: right;
-	color: white;
 	font-size: 1.2em;
 	padding: 0 15px;
 	display: flex;
 	align-items: center;
-	font-weight : bold;
+	*/
 }

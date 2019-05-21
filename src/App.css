@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+.App > main {
+  padding : 15px;
+  display : flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color : #585858;
+}

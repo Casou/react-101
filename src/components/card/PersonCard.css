@@ -1,0 +1,14 @@
+.person-card {
+    width: 300px;
+    min-height: 180px;
+    margin : 10px 15px;
+}
+
+.person-card .card_media {
+    height : 200px;
+    width : 100%;
+}
+
+.person-card h2 {
+    font-size : 20px;
+}
