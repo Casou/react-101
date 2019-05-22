@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Dialog, DialogContent, Icon} from "@material-ui/core";
+import {Dialog, DialogContent, Icon, Link} from "@material-ui/core";
 import {lpad} from "common";
 
 import "./PersonDialog.css";
@@ -32,7 +32,12 @@ const PersonDialog = ({ open, handleClose, person }) => {
 					<div id={"person-dialog__head-img"}>
 						<img src={ photo } alt={ photo } />
 						<h1>{person.name} {person.surname}</h1>
-						<h2>{person.job}</h2>
+						<h2>
+							{person.job}
+							<Link to={`/people/edit/${person.id}`}>
+								<Icon className={"edit_icon"}>edit</Icon>
+							</Link>
+						</h2>
 					</div>
 
 					<aside>

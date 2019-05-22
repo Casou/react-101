@@ -4,24 +4,18 @@ import HeaderBar from "./components/app-bar/HeaderBar";
 import {Redirect, Route, Switch} from "react-router-dom";
 import ListPeople from "./pages/list-people/ListPeople";
 import FilteredList from "./pages/filter/FilteredList";
+import EditPerson from "./pages/edit-person/EditPerson";
+import {connect} from "react-redux";
+import PeopleActions from "./store/people/actions";
+import {bindActionCreators} from "redux";
 
 class App extends React.Component {
 
-  state = {
-    people : []
-  };
-
   componentDidMount() {
-    fetch('/api/people')
-      .then(res => res.json())
-      .then(people => {
-        this.setState({ people })
-      });
+    this.props.peopleActions.getAllPeople();
   }
 
   render() {
-    const { people } = this.state;
-
     return (
       <div className="App">
         <header>
@@ -29,8 +23,9 @@ class App extends React.Component {
         </header>
         <main>
           <Switch>
-            <Route path="/list" component={() => <ListPeople people={ people } />} />
+            <Route path="/list" component={ ListPeople } />
             <Route path="/filter" component={ FilteredList } />
+            <Route path="/person/edit/:idPerson" component={ EditPerson } />
             <Redirect to="/list" />
           </Switch>
         </main>
@@ -39,4 +34,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+
+export default connect(null, dispatch => ({
+  peopleActions: bindActionCreators(PeopleActions, dispatch)
+}))(App);
