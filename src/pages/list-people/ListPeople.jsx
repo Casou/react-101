@@ -27,7 +27,8 @@ class ListPeople extends React.Component {
 			return people;
 		}
 
-		return people.filter(p => p.firstName.indexOf(searchText) >= 0 || p.lastName.indexOf(searchText) >= 0);
+		return people.filter(p => p.firstName.toLowerCase().indexOf(searchText.toLowerCase()) >= 0
+			|| p.lastName.toLowerCase().indexOf(searchText.toLowerCase()) >= 0);
 	};
 
 	openDialog = (person) => {

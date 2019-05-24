@@ -13,8 +13,8 @@ const HeaderBar = () => {
 				</h1>
 
 				<nav>
-					<NavLink to={"/list"}>List all</NavLink>
-					<NavLink to={"/filter"}>Filter</NavLink>
+					<NavLink to={"/people"}>Collaborateurs</NavLink>
+					<NavLink to={"/cra"}>CRA</NavLink>
 				</nav>
 			</Toolbar>
 		</AppBar>

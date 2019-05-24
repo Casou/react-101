@@ -1,13 +1,12 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import {Card, CardMedia, CardContent, Typography, CardActionArea} from "@material-ui/core";
 
 import './PersonCard.css';
 import { personType } from "types/person-type";
 
 const PersonCard = ({ person, onClick }) => (
-  <article className={"card"} onClick={ () => onClick(person) }>
+  <section className={"card"} onClick={ () => onClick(person) }>
     <Card classes={{ root : "person-card"}}>
       <CardActionArea>
         <CardMedia
@@ -17,14 +16,12 @@ const PersonCard = ({ person, onClick }) => (
         />
         <CardContent>
           <Typography component="h2">
-            <Link to={`/person/${person.id}`}>
-              {person.firstName} {person.lastName}
-            </Link>
+            {person.firstName} {person.lastName}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
-  </article>
+  </section>
 );
 
 PersonCard.propTypes = {

@@ -34,7 +34,7 @@ const PersonDialog = ({ open, handleClose, person }) => {
 						<h1>{person.name} {person.surname}</h1>
 						<h2>
 							{person.job}
-							<Link to={`/people/edit/${person.id}`}>
+							<Link href={`/people/edit/${person.id}`}>
 								<Icon className={"edit_icon"}>edit</Icon>
 							</Link>
 						</h2>

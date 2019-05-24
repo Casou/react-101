@@ -22,9 +22,10 @@
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "start": "run-p start:dev start:api",
+    "start": "run-p start:dev start:api-people start:api-cra",
     "start:dev": "react-scripts start",
-    "start:api": "json-server --port 3001 data/people.json",
+    "start:api-people": "json-server -p 3001 data/people.json",
+    "start:api-cra": "json-server -p 3002 data/cra.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

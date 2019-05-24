@@ -3,19 +3,29 @@ import './App.css';
 import HeaderBar from "./components/app-bar/HeaderBar";
 import {Redirect, Route, Switch} from "react-router-dom";
 import ListPeople from "./pages/list-people/ListPeople";
-import FilteredList from "./pages/filter/FilteredList";
+import Cra from "./pages/cra/Cra";
 import EditPerson from "./pages/edit-person/EditPerson";
 import {connect} from "react-redux";
 import PeopleActions from "./store/people/actions";
+import CraActions from "./store/cra/actions";
 import {bindActionCreators} from "redux";
 
 class App extends React.Component {
 
   componentDidMount() {
     this.props.peopleActions.getAllPeople();
+    this.props.craActions.getAllCraItems();
+  }
+
+  isApplicationReady() {
+    return this.props.people.length;
   }
 
   render() {
+    if (!this.isApplicationReady()) {
+      return "Loading";
+    }
+
     return (
       <div className="App">
         <header>
@@ -23,10 +33,10 @@ class App extends React.Component {
         </header>
         <main>
           <Switch>
-            <Route path="/list" component={ ListPeople } />
-            <Route path="/filter" component={ FilteredList } />
-            <Route path="/person/edit/:idPerson" component={ EditPerson } />
-            <Redirect to="/list" />
+            <Route path="/people" component={ ListPeople } exact />
+            <Route path="/cra" component={ Cra } exact />
+            <Route path="/people/edit/:id" component={ EditPerson } exact />
+            <Redirect to="/people" />
           </Switch>
         </main>
       </div>
@@ -35,6 +45,9 @@ class App extends React.Component {
 }
 
 
-export default connect(null, dispatch => ({
-  peopleActions: bindActionCreators(PeopleActions, dispatch)
+export default connect(state => ({
+  people: state.people
+}), dispatch => ({
+  peopleActions: bindActionCreators(PeopleActions, dispatch),
+  craActions: bindActionCreators(CraActions, dispatch)
 }))(App);
