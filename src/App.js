@@ -17,15 +17,7 @@ class App extends React.Component {
     this.props.craActions.getAllCraItems();
   }
 
-  isApplicationReady() {
-    return this.props.people.length;
-  }
-
   render() {
-    if (!this.isApplicationReady()) {
-      return "Loading";
-    }
-
     return (
       <div className="App">
         <header>
