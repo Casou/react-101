@@ -5,8 +5,7 @@ import {composeWithDevTools} from "redux-devtools-extension";
 
 export const configureStore = () => {
 	const initialStore = {
-		people: [],
-		cra: []
+		people: []
 	};
 
 	const store = createStore(

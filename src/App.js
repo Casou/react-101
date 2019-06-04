@@ -3,33 +3,39 @@ import './App.css';
 import HeaderBar from "./components/app-bar/HeaderBar";
 import {Redirect, Route, Switch} from "react-router-dom";
 import ListPeople from "./pages/list-people/ListPeople";
-import Cra from "./pages/cra/Cra";
+import RandomPeople from "./pages/random-people/RandomPeople";
 import EditPerson from "./pages/edit-person/EditPerson";
 import {connect} from "react-redux";
 import PeopleActions from "./store/people/actions";
-import CraActions from "./store/cra/actions";
 import {bindActionCreators} from "redux";
+import {CircularProgress} from "@material-ui/core";
 
 class App extends React.Component {
 
   componentDidMount() {
     this.props.peopleActions.getAllPeople();
-    this.props.craActions.getAllCraItems();
   }
 
   render() {
+    const { people } = this.props;
+
     return (
       <div className="App">
         <header>
           <HeaderBar />
         </header>
         <main>
-          <Switch>
-            <Route path="/people" component={ ListPeople } exact />
-            <Route path="/cra" component={ Cra } exact />
-            <Route path="/people/edit/:id" component={ EditPerson } exact />
-            <Redirect to="/people" />
-          </Switch>
+          {
+            !people.length ?
+              <CircularProgress />
+            :
+              <Switch>
+                <Route path="/people" component={ ListPeople } exact />
+                <Route path="/random" component={ RandomPeople } exact />
+                <Route path="/people/edit/:id" component={ EditPerson } exact />
+                <Redirect to="/people" />
+              </Switch>
+          }
         </main>
       </div>
     );
@@ -40,6 +46,5 @@ class App extends React.Component {
 export default connect(state => ({
   people: state.people
 }), dispatch => ({
-  peopleActions: bindActionCreators(PeopleActions, dispatch),
-  craActions: bindActionCreators(CraActions, dispatch)
+  peopleActions: bindActionCreators(PeopleActions, dispatch)
 }))(App);

@@ -1,0 +1,7 @@
+#random {
+    text-align : center;
+}
+
+#random .card {
+    display: inline-block;
+}

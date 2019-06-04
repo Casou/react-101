@@ -6,7 +6,7 @@ import './PersonCard.css';
 import { personType } from "types/person-type";
 
 const PersonCard = ({ person, onClick }) => (
-  <section className={"card"} onClick={ () => onClick(person) }>
+  <section className={"card"} onClick={ () => onClick && onClick(person) }>
     <Card classes={{ root : "person-card"}}>
       <CardActionArea>
         <CardMedia
@@ -26,7 +26,7 @@ const PersonCard = ({ person, onClick }) => (
 
 PersonCard.propTypes = {
   person: personType.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
 };
 
 export default PersonCard;

@@ -5,7 +5,6 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
-    "http-proxy-middleware": "^0.19.1",
     "json-server": "^0.14.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -22,10 +21,9 @@
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "start": "run-p start:dev start:api-people start:api-cra",
+    "start": "run-p start:dev start:api",
     "start:dev": "react-scripts start",
-    "start:api-people": "json-server -p 3001 data/people.json",
-    "start:api-cra": "json-server -p 3002 data/cra.json",
+    "start:api": "json-server -p 3001 data/people.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

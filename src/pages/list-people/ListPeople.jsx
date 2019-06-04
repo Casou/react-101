@@ -6,7 +6,7 @@ import SearchInput from "./components/search-input/SearchInput";
 import './ListPeople.css';
 import PersonDialog from "./components/person-dialog/PersonDialog";
 import {connect} from "react-redux";
-import { CircularProgress } from "@material-ui/core";
+import {sortPeople} from "../../common";
 
 class ListPeople extends React.Component {
 
@@ -25,11 +25,13 @@ class ListPeople extends React.Component {
 		const { searchText } = this.state;
 
 		if (!searchText) {
-			return people;
+			return people.sort(sortPeople);
 		}
 
-		return people.filter(p => p.firstName.toLowerCase().indexOf(searchText.toLowerCase()) >= 0
-			|| p.lastName.toLowerCase().indexOf(searchText.toLowerCase()) >= 0);
+		return people.filter(p =>
+					p.firstName.toLowerCase().indexOf(searchText.toLowerCase()) >= 0
+					|| p.lastName.toLowerCase().indexOf(searchText.toLowerCase()) >= 0)
+			.sort(sortPeople);
 	};
 
 	openDialog = (person) => {
@@ -41,14 +43,7 @@ class ListPeople extends React.Component {
 	};
 
 	render() {
-		const { people } = this.props;
 		const { searchText, dialogOpen, selectedPerson } = this.state;
-
-		if (!people.length) {
-			return (
-				<CircularProgress />
-			);
-		}
 
 		return (
 			<Fragment>
