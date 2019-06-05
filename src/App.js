@@ -6,14 +6,20 @@ import ListPeople from "./pages/list-people/ListPeople";
 import RandomPeople from "./pages/random-people/RandomPeople";
 import EditPerson from "./pages/edit-person/EditPerson";
 import {connect} from "react-redux";
-import PeopleActions from "./store/people/actions";
-import {bindActionCreators} from "redux";
 import {CircularProgress} from "@material-ui/core";
+import {loadPeople} from "./store/people/actions";
+
+// With action creators
+// import PeopleActions from "./store/people/actions";
+// import {bindActionCreators} from "redux";
 
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.peopleActions.getAllPeople();
+    this.props.loadPeople();
+
+    // With action creators
+    // this.props.peopleActions.loadPeople();
   }
 
   render() {
@@ -42,9 +48,11 @@ class App extends React.Component {
   }
 }
 
-
 export default connect(state => ({
   people: state.people
 }), dispatch => ({
-  peopleActions: bindActionCreators(PeopleActions, dispatch)
+  // With action creators
+  // peopleActions: bindActionCreators(PeopleActions, dispatch)
+  loadPeople: () => dispatch(loadPeople())
 }))(App);
+

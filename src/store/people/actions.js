@@ -1,14 +1,24 @@
-export default {
+import {getAllPeople} from "../../service/people";
 
-	getAllPeople: () => dispatch => {
-		return fetch('/api/people')
-			.then(res => res.json())
-			.then(people => {
-				return dispatch({
-					type: "ALL_PEOPLE",
-					payload: people
-				})
-			});
-	},
-
+export const loadPeople = () => (dispatch) => {
+	return getAllPeople()
+		.then(people =>
+			dispatch({
+				type: "ALL_PEOPLE",
+				payload : people
+			}));
 };
+
+// With action creators
+//
+// export default {
+//
+// 	loadPeople: () => (dispatch) => {
+// 		return getAllPeople()
+// 			.then(people =>
+// 				dispatch({
+// 					type: "ALL_PEOPLE",
+// 					payload : people
+// 				}));
+// 	}
+// };

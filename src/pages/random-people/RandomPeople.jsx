@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from "react-redux";
 import PersonCard from "../list-people/components/person-card/PersonCard";
 
 import './RandomPeople.css';
+import {withStorePeople} from "../../components/hoc/withStorePeople";
 
 const RandomPeople = ({ people }) => {
 	return (
@@ -17,6 +17,4 @@ RandomPeople.propTypes = {
 	people: PropTypes.array.isRequired
 };
 
-export default connect(state => ({
-	people: state.people
-}), null)(RandomPeople);
+export default withStorePeople(RandomPeople);

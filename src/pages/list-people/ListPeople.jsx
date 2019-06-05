@@ -5,8 +5,8 @@ import SearchInput from "./components/search-input/SearchInput";
 
 import './ListPeople.css';
 import PersonDialog from "./components/person-dialog/PersonDialog";
-import {connect} from "react-redux";
 import {sortPeople} from "../../common";
+import {withStorePeople} from "../../components/hoc/withStorePeople";
 
 class ListPeople extends React.Component {
 
@@ -75,6 +75,4 @@ ListPeople.propTypes = {
 	people: PropTypes.array.isRequired
 };
 
-export default connect(state => ({
-	people: state.people
-}), null)(ListPeople);
+export default withStorePeople(ListPeople);

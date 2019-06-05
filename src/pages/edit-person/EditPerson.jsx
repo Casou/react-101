@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from "react-redux";
 import { Card, CardContent, CardActions, TextField, Button } from "@material-ui/core";
 
 import "./EditPerson.css";
+import {withStorePeople} from "../../components/hoc/withStorePeople";
 
 class EditPerson extends React.Component {
 
@@ -22,6 +22,10 @@ class EditPerson extends React.Component {
 		const { person } = this.state;
 		person[property] = event.target.value;
 		this.setState({ person });
+	};
+
+	save = () => {
+		window.location.replace("/people");
 	};
 
 	render() {
@@ -71,7 +75,7 @@ class EditPerson extends React.Component {
 					</section>
 				</CardContent>
 				<CardActions classes={{ root : "edit-person__actions" }}>
-					<Button variant="contained" color="primary">
+					<Button variant="contained" color="primary" onClick={this.save}>
 						Enregistrer
 					</Button>
 				</CardActions>
@@ -84,6 +88,4 @@ EditPerson.propTypes = {
 	people: PropTypes.array.isRequired
 };
 
-export default connect(state => ({
-	people: state.people
-}), null)(EditPerson);
+export default withStorePeople(EditPerson);
