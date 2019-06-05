@@ -4,6 +4,7 @@ import { Card, CardContent, CardActions, TextField, Button } from "@material-ui/
 
 import "./EditPerson.css";
 import {withStorePeople} from "../../components/hoc/withStorePeople";
+import {Redirect} from "react-router-dom";
 
 class EditPerson extends React.Component {
 
@@ -14,7 +15,8 @@ class EditPerson extends React.Component {
 		const person = this.props.people.find(p => p.id === id);
 
 		this.state = {
-			person
+			person,
+			redirect: false
 		};
 	}
 
@@ -25,11 +27,19 @@ class EditPerson extends React.Component {
 	};
 
 	save = () => {
-		window.location.replace("/people");
+		const { onSave } = this.props;
+		const { person } = this.state;
+
+		onSave(person)
+			.then(() => this.setState({ redirect : true }));
 	};
 
 	render() {
-		const { person } = this.state;
+		const { person, redirect } = this.state;
+
+		if (redirect) {
+			return <Redirect to='/people' />
+		}
 
 		const sex = person.sex === 1 ? "male" : "female";
 		const photo = `/photos/${sex}/${person.pictureIndex}.jpg`;
@@ -85,7 +95,8 @@ class EditPerson extends React.Component {
 }
 
 EditPerson.propTypes = {
-	people: PropTypes.array.isRequired
+	people: PropTypes.array.isRequired,
+	onSave: PropTypes.func.isRequired
 };
 
 export default withStorePeople(EditPerson);

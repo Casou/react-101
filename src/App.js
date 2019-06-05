@@ -6,8 +6,9 @@ import ListPeople from "./pages/list-people/ListPeople";
 import RandomPeople from "./pages/random-people/RandomPeople";
 import EditPerson from "./pages/edit-person/EditPerson";
 import {CircularProgress} from "@material-ui/core";
-import {loadPeople} from "./store/people/actions";
+import {loadPeople, savePerson} from "./store/people/actions";
 import {withStorePeople} from "./components/hoc/withStorePeople";
+import {getAllPeople, updatePerson} from "./service/people";
 
 // With action creators :
 // import PeopleActions from "./store/people/actions";
@@ -23,7 +24,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { people } = this.props;
+    const { people, savePerson } = this.props;
 
     return (
       <div className="App">
@@ -38,7 +39,7 @@ class App extends React.Component {
               <Switch>
                 <Route path="/people" component={ ListPeople } exact />
                 <Route path="/random" component={ RandomPeople } exact />
-                <Route path="/people/edit/:id" component={ EditPerson } exact />
+                <Route path="/people/edit/:id" render={ (props) => <EditPerson {...props} onSave={savePerson} /> } exact />
                 <Redirect to="/people" />
               </Switch>
           }
@@ -51,7 +52,8 @@ class App extends React.Component {
 const mapDispatchToProps = dispatch => ({
   // With action creators :
   // peopleActions: bindActionCreators(PeopleActions, dispatch)
-  loadPeople: () => dispatch(loadPeople())
+  loadPeople: () => dispatch(loadPeople(getAllPeople)),
+  savePerson: (person) => dispatch(savePerson(() => updatePerson(person)))
 });
 
 export default withStorePeople(App, mapDispatchToProps);

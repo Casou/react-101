@@ -3,8 +3,8 @@ export async function getAllPeople() {
   return await response.json();
 }
 
-export async function updatePerson(id, person) {
-  const response = await fetch(`/api/people/${id}`, {
+export async function updatePerson(person) {
+  const response = await fetch(`/api/people/${person.id}`, {
     method: 'PATCH',
     body: JSON.stringify(person),
     headers: { 'Content-Type': 'application/json' }
