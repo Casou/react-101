@@ -5,11 +5,11 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import ListPeople from "./pages/list-people/ListPeople";
 import RandomPeople from "./pages/random-people/RandomPeople";
 import EditPerson from "./pages/edit-person/EditPerson";
-import {connect} from "react-redux";
 import {CircularProgress} from "@material-ui/core";
 import {loadPeople} from "./store/people/actions";
+import {withStorePeople} from "./components/hoc/withStorePeople";
 
-// With action creators
+// With action creators :
 // import PeopleActions from "./store/people/actions";
 // import {bindActionCreators} from "redux";
 
@@ -18,7 +18,7 @@ class App extends React.Component {
   componentDidMount() {
     this.props.loadPeople();
 
-    // With action creators
+    // With action creators :
     // this.props.peopleActions.loadPeople();
   }
 
@@ -48,11 +48,11 @@ class App extends React.Component {
   }
 }
 
-export default connect(state => ({
-  people: state.people
-}), dispatch => ({
-  // With action creators
+const mapDispatchToProps = dispatch => ({
+  // With action creators :
   // peopleActions: bindActionCreators(PeopleActions, dispatch)
   loadPeople: () => dispatch(loadPeople())
-}))(App);
+});
+
+export default withStorePeople(App, mapDispatchToProps);
 

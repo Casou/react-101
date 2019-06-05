@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 
-export const withStorePeople = (WrappedComponent) => {
+export const withStorePeople = (WrappedComponent, mapDispatchToProps = null) => {
 	return connect(state => ({
 		people: state.people
-	}), null)(WrappedComponent);
+	}), mapDispatchToProps)(WrappedComponent);
 };

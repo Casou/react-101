@@ -9,7 +9,7 @@ export const loadPeople = () => (dispatch) => {
 			}));
 };
 
-// With action creators
+// With action creators :
 //
 // export default {
 //
