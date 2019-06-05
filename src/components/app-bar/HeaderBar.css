@@ -2,23 +2,19 @@
 	background-color: #275aab;
 	color: white;
 	font-weight : bold;
-
-	/*
-	background-repeat: no-repeat;
-	background-position: right;
-	font-size: 1.2em;
-	padding: 0 15px;
-	display: flex;
-	align-items: center;
-	*/
 }
 
 .HeaderBar h1 {
 	font-size : 20px;
+	margin : 0;
+}
+
+.HeaderBar h1 img {
+	height : 60px;
 }
 
 nav {
-	margin-left : 50px;
+	margin-left : 30px;
 	font-size : 16px;
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './HeaderBar.css';
+// import logo from '../../../public/resources/images/logo.png';
 import { Toolbar, AppBar } from "@material-ui/core";
 import {NavLink} from "react-router-dom";
 
@@ -9,7 +10,7 @@ const HeaderBar = () => {
 		<AppBar position="static" classes={{ root : "HeaderBar"}}>
 			<Toolbar>
 				<h1>
-					Proxiad
+					<img src={"/resources/images/logo.png"} alt={"Proxiad"} />
 				</h1>
 
 				<nav>
