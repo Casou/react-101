@@ -7,7 +7,7 @@ const MESSAGE = "Hello, World!";
 const App = () => (
   <div className="App">
     <header><AppBar /></header>
-    <main><Card /></main>
+    <main><Card message={ MESSAGE } /></main>
   </div>
 );
 
