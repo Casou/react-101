@@ -1,9 +1,11 @@
 import React from 'react';
+import AppBar from 'components/AppBar';
+import Card from 'components/Card';
 
 const App = () => (
   <div className="App">
-    <header>Insérez votre AppBar ici</header>
-    <main>Insérez votre Card ici</main>
+    <header><AppBar /></header>
+    <main><Card /></main>
   </div>
 );
 
