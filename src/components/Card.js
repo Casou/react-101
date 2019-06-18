@@ -2,9 +2,9 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({ message }) => (
-    <section className="card person-card">
+    <section className="card person-card class-to-remove">
         <div className="card-image">
-            <img src="https://uinames.com/api/photos/female/1.jpg" />
+            <img src="https://uinames.com/api/photos/female/1.jpg" alt="Avatar" />
         </div>
         <div className="card-content">
             <div className="card-title">

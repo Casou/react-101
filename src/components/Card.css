@@ -12,3 +12,9 @@
     width : 100%;
     padding : 12px
 }
+
+.class-to-remove {
+    display : inline-block;
+    margin : 15px;
+    vertical-align: top;
+}
