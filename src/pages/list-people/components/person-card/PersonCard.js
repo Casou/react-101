@@ -11,7 +11,7 @@ const PersonCard = ({ person, onClick }) => (
       <CardActionArea>
         <CardMedia
           classes={{root : "card_media"}}
-          image={ `/photos/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex }.jpg` }
+          image={ `https://uinames.com/api/photos/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex + 1}.jpg` }
           title={`Picture of ${person.firstName}`}
         />
         <CardContent>
