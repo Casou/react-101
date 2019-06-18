@@ -1,10 +1,9 @@
 import React from 'react';
 import AppBar from 'components/AppBar';
-import Card from 'components/Card';
+import PersonCard from 'components/PersonCard';
 
 import { people } from './data/people.json';
 
-console.log(people);
 const randomPerson = people[Math.floor(Math.random() * people.length)];
 
 const App = () => (
@@ -13,7 +12,7 @@ const App = () => (
       <AppBar />
     </header>
     <main>
-      <Card />
+      <PersonCard person={ randomPerson } />
       <section className="class-to-remove">
         <p>Structure de l'objet "Person"</p>
         <pre>{JSON.stringify(randomPerson, null, 2)}</pre>
