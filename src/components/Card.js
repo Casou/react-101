@@ -1,8 +1,8 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ person }) => (
-    <section className="card person-card class-to-remove">
+const Card = () => (
+    <section className="card person-card">
         <div className="card-image">
             <img src="https://uinames.com/api/photos/female/1.jpg" alt="Avatar" />
         </div>

@@ -13,10 +13,6 @@ const App = () => (
     </header>
     <main>
       <PersonCard person={ randomPerson } />
-      <section className="class-to-remove">
-        <p>Structure de l'objet "Person"</p>
-        <pre>{JSON.stringify(randomPerson, null, 2)}</pre>
-      </section>
     </main>
   </div>
 );
