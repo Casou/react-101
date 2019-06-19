@@ -10,7 +10,7 @@ const App = () => (
       <AppBar />
     </header>
     <main>
-      <Discover people={ people } />
+      <Discover people={people} />
     </main>
   </div>
 );
