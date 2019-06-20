@@ -1,7 +1,6 @@
 #random {
-    text-align : center;
-}
-
-#random .card {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
