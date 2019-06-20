@@ -1,7 +1,7 @@
 import React from 'react';
 import PersonCard from './PersonCard';
 
-class Discover extends React.Component {
+class Random extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,4 +31,4 @@ class Discover extends React.Component {
     };
 }
 
-export default Discover;
+export default Random;
