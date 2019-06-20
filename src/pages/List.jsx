@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import PersonCard from "./components/person-card/PersonCard";
+import PersonCard from "../components/person-card/PersonCard";
 
 import './List.css';
 
