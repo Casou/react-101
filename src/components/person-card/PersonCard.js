@@ -1,9 +1,7 @@
 import React from 'react';
-import * as PropTypes from 'prop-types';
 import {Card, CardMedia, CardContent, Typography, CardActionArea} from "@material-ui/core";
 
 import './PersonCard.css';
-import { personType } from "types/person-type";
 
 const PersonCard = ({ person, onClick }) => (
   <section className={"card"} onClick={ () => onClick && onClick(person) }>
@@ -23,10 +21,5 @@ const PersonCard = ({ person, onClick }) => (
     </Card>
   </section>
 );
-
-PersonCard.propTypes = {
-  person: personType.isRequired,
-  onClick: PropTypes.func
-};
 
 export default PersonCard;
