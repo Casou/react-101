@@ -5,18 +5,17 @@ class Random extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            person: this._randomPeople()
+            personIndex : 0
         };
     }
 
     componentDidMount() {
-        this.intervalId = setInterval(() => this.setState({ 
-            person: this._randomPeople()
-        }), 2000);
+        this.intervalId = setInterval(this._updatePeople, 2000);
     }
 
-    _randomPeople() {
-        return this.props.people[Math.floor(Math.random() * this.props.people.length)];
+    _updatePeople = () => {
+        const {people} = this.props;
+        this.setState({ personIndex: Math.floor(Math.random() * people.length) });
     }
 
     componentWillUnmount() {
@@ -24,9 +23,11 @@ class Random extends React.Component {
     }
 
     render() {
-        const { person } = this.state;
+        const { people } = this.props;
+        const { personIndex } = this.state;
+
         return (
-            <PersonCard person={person} />
+            <PersonCard person={people[personIndex]} />
         );
     };
 }
