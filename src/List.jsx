@@ -1,19 +1,6 @@
-import React, {Fragment} from 'react';
-import PersonCard from "./components/person-card/PersonCard";
-
+import React from 'react';
 import './List.css';
 
-const List = ({ people }) => (
-	<Fragment>
-		<article id={"list-people"}>
-			{
-				people.map(p =>
-					<PersonCard key={ p.id }
-								person={p}
-					/>)
-			}
-		</article>
-	</Fragment>
-);
+const List = () => (<div></div>);
 
 export default List;
