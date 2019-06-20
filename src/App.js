@@ -1,6 +1,6 @@
 import React from 'react';
 import AppBar from 'components/AppBar';
-import Discover from 'components/Discover';
+import Random from 'components/Random';
 
 import { people } from './data/people.json';
 
@@ -10,7 +10,7 @@ const App = () => (
       <AppBar />
     </header>
     <main>
-      <Discover people={ people } />
+      <Random people={ people } />
     </main>
   </div>
 );
