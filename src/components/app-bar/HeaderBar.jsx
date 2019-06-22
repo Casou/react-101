@@ -13,7 +13,7 @@ const HeaderBar = () => {
 				</h1>
 
 				<nav>
-					<NavLink to={"/"}>Collaborateurs</NavLink>
+					<NavLink to={"/"} exact>Collaborateurs</NavLink>
 					<NavLink to={"/random"}>Random</NavLink>
 				</nav>
 			</Toolbar>
