@@ -25,10 +25,24 @@ class List extends React.Component {
     this.setState({ searchText : e.target.value });
   };
 
+  _filterPeople = () => {
+    const { people } = this.props;
+    const { searchText } = this.state;
+
+    let filteredPeople = people;
+    if (searchText) {
+      filteredPeople = filteredPeople.filter(p =>
+        p.lastName.indexOf(searchText) >= 0 || p.firstName.indexOf(searchText) >= 0);
+    }
+
+    return filteredPeople.sort(sortPeople);
+  };
+
   render() {
     const { people } = this.props;
     const { searchText } = this.state;
-    const sortedPeople = people.sort(sortPeople);
+    const sortedPeople = this._filterPeople(people);
+
     return (
       <Fragment>
         <SearchInput placeholder={"Chercher par nom"}

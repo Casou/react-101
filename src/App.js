@@ -6,6 +6,8 @@ import Random from 'pages/Random.jsx';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {CircularProgress} from "@material-ui/core";
 
+import "./App.css";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
