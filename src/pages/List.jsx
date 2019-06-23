@@ -26,6 +26,6 @@ const List = ({people}) => {
       </article>
     </Fragment>
   );
-}
+};
 
 export default List;
