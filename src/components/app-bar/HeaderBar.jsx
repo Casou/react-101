@@ -15,7 +15,6 @@ const HeaderBar = () => {
 				<nav>
 					<NavLink to={"/"} exact>Collaborateurs</NavLink>
 					<NavLink to={"/random"}>Random</NavLink>
-					<NavLink to={"/people/1"}>First</NavLink>
 				</nav>
 			</Toolbar>
 		</AppBar>

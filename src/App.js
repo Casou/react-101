@@ -4,13 +4,20 @@ import HeaderBar from 'components/app-bar/HeaderBar';
 import List from 'pages/List.jsx';
 import Random from 'pages/Random.jsx';
 import {Switch, Route, Redirect} from 'react-router-dom';
+import {CircularProgress} from "@material-ui/core";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      people: []
+      people: null
     };
+  }
+
+  componentDidMount() {
+    fetch("/api/people")
+      .then(response => response.json())
+      .then(data => this.setState({ people : data }));
   }
 
   render() {
@@ -21,11 +28,15 @@ class App extends React.Component {
           <HeaderBar/>
         </header>
         <main>
-          <Switch>
-            <Route path="/" exact render={() => <List people={people}/>}/>
-            <Route path="/random" component={() => <Random people={people}/>}/>
-            <Redirect from="*" to="/"/>
-          </Switch>
+          { !people ?
+            <CircularProgress />
+            :
+            <Switch>
+              <Route path="/" exact render={() => <List people={people}/>}/>
+              <Route path="/random" component={() => <Random people={people}/>}/>
+              <Redirect from="*" to="/"/>
+            </Switch>
+          }
         </main>
       </div>
     );
