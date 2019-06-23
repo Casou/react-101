@@ -14,29 +14,19 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    fetch("/api/people")
-      .then(response => response.json())
-      .then(data => this.setState({ people : data }));
-  }
-
   render() {
-    const { people } = this.state;
+    const {people} = this.state;
     return (
       <div className="App">
         <header>
           <HeaderBar/>
         </header>
         <main>
-          { !people ?
-            <CircularProgress />
-            :
-            <Switch>
-              <Route path="/" exact render={() => <List people={people}/>}/>
-              <Route path="/random" component={() => <Random people={people}/>}/>
-              <Redirect from="*" to="/"/>
-            </Switch>
-          }
+          <Switch>
+            <Route path="/" exact render={() => <List people={people}/>}/>
+            <Route path="/random" component={() => <Random people={people}/>}/>
+            <Redirect from="*" to="/"/>
+          </Switch>
         </main>
       </div>
     );
