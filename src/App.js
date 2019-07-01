@@ -6,24 +6,21 @@ import Random from 'pages/Random.jsx';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {CircularProgress} from "@material-ui/core";
 
+import {connect} from 'react-redux';
+
 import "./App.css";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      people: null
-    };
-  }
-
   componentDidMount() {
+    /*
     fetch("/api/people")
       .then(response => response.json())
       .then(data => this.setState({ people : data }));
+    */
   }
 
   render() {
-    const { people } = this.state;
+    const { people } = this.props;
     return (
       <div className="App">
         <header>
@@ -45,4 +42,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(state => ({ people : state.people }), null)(App);
