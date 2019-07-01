@@ -11,12 +11,10 @@ import {connect} from 'react-redux';
 import "./App.css";
 
 class App extends React.Component {
+  
   componentDidMount() {
-    /*
-    fetch("/api/people")
-      .then(response => response.json())
-      .then(data => this.setState({ people : data }));
-    */
+    console.log("component");
+    this.props.fetchPeople();
   }
 
   render() {
@@ -42,4 +40,8 @@ class App extends React.Component {
   }
 }
 
-export default connect(state => ({ people : state.people }), null)(App);
+export default connect(
+  state => ({ people : state.people }), 
+  dispatch => ({
+    fetchPeople : (people) => dispatch({ type : 'ADD_PEOPLE', payload : people })
+  }))(App);

@@ -1,3 +1,8 @@
-export const people = (state, action) => {
-    return state;
+export const people = (state = [], action) => {
+    switch(action.type) {
+        case "ALL_PEOPLE":
+            return action.payload;
+        default: 
+            return state;
+    }
 };
