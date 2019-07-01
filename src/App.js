@@ -14,7 +14,6 @@ import { fetchPeople } from 'store/actions';
 class App extends React.Component {
   
   componentDidMount() {
-    console.log("component");
     this.props.fetchPeople();
   }
 
@@ -44,8 +43,9 @@ class App extends React.Component {
 const mapStateToProps = state => ({
   people : state.people
 });
+
 const mapDispatchToProps = dispatch => ({
-  fetchPeople : () => dispatch(fetchPeople())
+  fetchPeople: () => dispatch(fetchPeople())
 });
 
 export default connect(
