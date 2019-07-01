@@ -1,5 +1,5 @@
-export async const fetchPeople = () => (dispatch) => {
-    console.log("fetch");
-    const response = await fetch("/api/people");
-    return response.json();
+export const fetchPeople = () => (dispatch) => {
+    return fetch("/api/people")
+        .then(r => r.json)
+        .then(people => dispatch({ type: "ALL_PEOPLE", payload: people }));
 };

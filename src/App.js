@@ -9,6 +9,7 @@ import {CircularProgress} from "@material-ui/core";
 import {connect} from 'react-redux';
 
 import "./App.css";
+import { fetchPeople } from 'store/actions';
 
 class App extends React.Component {
   
@@ -40,8 +41,13 @@ class App extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  people : state.people
+});
+const mapDispatchToProps = dispatch => ({
+  fetchPeople : () => dispatch(fetchPeople())
+});
+
 export default connect(
-  state => ({ people : state.people }), 
-  dispatch => ({
-    fetchPeople : (people) => dispatch({ type : 'ADD_PEOPLE', payload : people })
-  }))(App);
+  mapStateToProps, 
+  mapDispatchToProps)(App);
