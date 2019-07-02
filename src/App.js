@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderBar from 'components/app-bar/HeaderBar';
 
 import { people } from './data/people.json';
-import List from 'List.jsx';
+import List from './List';
 
 const App = () => (
   <div className="App">

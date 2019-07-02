@@ -3,8 +3,8 @@ import {Card, CardMedia, CardContent, Typography, CardActionArea} from "@materia
 
 import './PersonCard.css';
 
-const PersonCard = ({ person, onClick }) => (
-  <section className={"card"} onClick={ () => onClick && onClick(person) }>
+const PersonCard = ({ person }) => (
+  <section className={"card"}>
     <Card classes={{ root : "person-card"}}>
       <CardActionArea>
         <CardMedia
