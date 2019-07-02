@@ -11,12 +11,6 @@ const HeaderBar = () => {
 				<h1>
 					<img src={"/resources/images/logo.png"} alt={"Proxiad"} />
 				</h1>
-
-				<nav>
-					<NavLink to={"/"} exact>Collaborateurs</NavLink>
-					<NavLink to={"/random"}>Random</NavLink>
-					<NavLink to={"/people/1"}>First</NavLink>
-				</nav>
 			</Toolbar>
 		</AppBar>
 	);
