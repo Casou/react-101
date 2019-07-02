@@ -1,6 +1,6 @@
 import React from 'react';
 import './List.css';
 
-const List = () => (<div></div>);
+const List = () => (<article id={"list-people"}></article>);
 
 export default List;
