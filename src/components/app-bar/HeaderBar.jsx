@@ -11,6 +11,10 @@ const HeaderBar = () => {
 				<h1>
 					<img src={"/resources/images/logo.png"} alt={"Proxiad"} />
 				</h1>
+
+				<nav>
+					Créer le menu ici
+				</nav>
 			</Toolbar>
 		</AppBar>
 	);
