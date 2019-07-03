@@ -6,27 +6,19 @@ import Random from 'pages/Random.jsx';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {CircularProgress} from "@material-ui/core";
 
-import {connect} from 'react-redux';
-
 import "./App.css";
-import { fetchPeople } from 'store/actions';
 
 class App extends React.Component {
-  
-  componentDidMount() {
-    this.props.fetchPeople();
-  }
-
   render() {
-    const { people } = this.props;
+    const {people} = this.props;
     return (
       <div className="App">
         <header>
           <HeaderBar/>
         </header>
         <main>
-          { !people ?
-            <CircularProgress />
+          {!people ?
+            <CircularProgress/>
             :
             <Switch>
               <Route path="/" exact render={() => <List people={people}/>}/>
@@ -40,14 +32,4 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  people : state.people
-});
-
-const mapDispatchToProps = dispatch => ({
-  fetchPeople: () => dispatch(fetchPeople())
-});
-
-export default connect(
-  mapStateToProps, 
-  mapDispatchToProps)(App);
+export default App;
