@@ -10,9 +10,7 @@ const PersonDialog = ({ open, handleClose, person }) => {
     return "";
   }
 
-  const sex = person.sex === 1 ? "male" : "female";
-  const photo = `/photos/${sex}/${person.pictureIndex}.jpg`;
-
+  const photo = `https://uinames.com/api/photos/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex }.jpg`;
   const birthdate = lpad(person.birthDate[2]) + "/" + lpad(person.birthDate[1]) + "/" + lpad(person.birthDate[0]);
   const arrivalDate = lpad(person.arrivalDate[2]) + "/" + lpad(person.arrivalDate[1]) + "/" + lpad(person.arrivalDate[0]);
 
@@ -34,9 +32,6 @@ const PersonDialog = ({ open, handleClose, person }) => {
             <h1>{person.name} {person.surname}</h1>
             <h2>
               {person.job}
-              <Link href={`/people/edit/${person.id}`}>
-                <Icon className={"edit_icon"}>edit</Icon>
-              </Link>
             </h2>
           </div>
 
