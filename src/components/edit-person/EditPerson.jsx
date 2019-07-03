@@ -1,101 +1,88 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardContent, CardActions, TextField, Button } from "@material-ui/core";
+import {Card, CardContent, CardActions, TextField, Button} from "@material-ui/core";
 
 import "./EditPerson.css";
 import {Redirect} from "react-router-dom";
 
 class EditPerson extends React.Component {
 
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		const id = parseInt(this.props.match.params.id);
-		const person = this.props.people.find(p => p.id === id);
+    const id = parseInt(props.match.params.id);
+    const person = props.people.find(p => p.id === id);
 
-		this.state = {
-			person,
-			redirect: false
-		};
-	}
+    this.state = {
+      person,
+      redirect: false
+    };
+  }
 
-	handleChange = property => event => {
-		const { person } = this.state;
-		person[property] = event.target.value;
-		this.setState({ person });
-	};
+  handleChange = property => event => {
+    const {person} = this.state;
+    person[property] = event.target.value;
+    this.setState({person});
+  };
 
-	save = () => {
-		const { onSave } = this.props;
-		const { person } = this.state;
+  save = () => {
+    const {onSave} = this.props;
+    const {person} = this.state;
 
-		onSave(person)
-			.then(() => this.setState({ redirect : true }));
-	};
+    onSave(person)
+      .then(() => this.setState({redirect: true}));
+  };
 
-	render() {
-		const { person, redirect } = this.state;
+  inputField = (attribute, label) =>
+      <TextField
+        label={label}
+        value={this.state.person[attribute]}
+        onChange={this.handleChange(attribute)}
+        classes={{root: "input-field"}}
+      />;
 
-		if (redirect) {
-			return <Redirect to='/people' />
-		}
+  render() {
+    const {person, redirect} = this.state;
 
-		const sex = person.sex === 1 ? "male" : "female";
-		const photo = `/photos/${sex}/${person.pictureIndex}.jpg`;
+    if (redirect) {
+      return <Redirect to='/'/>
+    }
 
-		return (
-			<Card classes={{ root : "edit-person"}}>
-				<CardContent>
-					<img src={ photo } alt={ photo } />
-					<section>
-						<h1>{person.firstName} {person.lastName}</h1>
-						<div>
-							<TextField
-								label="First Name"
-								value={person.firstName}
-								onChange={this.handleChange('firstName')}
-								classes={{ root : "input-field"}}
-							/>
-						</div>
-						<div>
-							<TextField
-								label="Last Name"
-								value={person.lastName}
-								onChange={this.handleChange('lastName')}
-								classes={{ root : "input-field"}}
-							/>
-						</div>
-						<div>
-							<TextField
-								label="Email"
-								value={person.email}
-								onChange={this.handleChange('email')}
-								classes={{ root : "input-field"}}
-							/>
-						</div>
-						<div>
-							<TextField
-								label="Phone"
-								value={person.phone}
-								onChange={this.handleChange('phone')}
-								classes={{ root : "input-field"}}
-							/>
-						</div>
-					</section>
-				</CardContent>
-				<CardActions classes={{ root : "edit-person__actions" }}>
-					<Button variant="contained" color="primary" onClick={this.save}>
-						Enregistrer
-					</Button>
-				</CardActions>
-			</Card>
-		);
-	}
+    const photo = `https://uinames.com/api/photos/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex }.jpg`;
+
+    return (
+      <Card classes={{root: "edit-person"}}>
+        <CardContent>
+          <img src={photo} alt={photo}/>
+          <section>
+            <h1>{person.firstName} {person.lastName}</h1>
+            <div>
+              { this.inputField("firstName", "First Name") }
+            </div>
+            <div>
+              { this.inputField("lastName", "Last Name") }
+            </div>
+            <div>
+              { this.inputField("email", "Email") }
+            </div>
+            <div>
+              { this.inputField("phone", "Phone") }
+            </div>
+          </section>
+        </CardContent>
+        <CardActions classes={{root: "edit-person__actions"}}>
+          <Button variant="contained" color="primary" onClick={this.save}>
+            Enregistrer
+          </Button>
+        </CardActions>
+      </Card>
+    );
+  }
 }
 
 EditPerson.propTypes = {
-	people: PropTypes.array.isRequired,
-	onSave: PropTypes.func.isRequired
+  people: PropTypes.array.isRequired,
+  onSave: PropTypes.func.isRequired
 };
 
 export default EditPerson;
