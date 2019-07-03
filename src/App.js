@@ -44,9 +44,9 @@ const mapStateToProps = state => ({
   people : state.people
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchPeople: () => dispatch(fetchPeople())
-});
+const mapDispatchToProps = {
+  fetchPeople
+};
 
 export default connect(
   mapStateToProps, 
