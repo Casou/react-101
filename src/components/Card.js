@@ -30,9 +30,7 @@ const Info = ({ icon, children }) => (
 
 const Card = ({ avatar, children }) => (
     <section className="card person-card">
-        <div className="card-image">
-            { avatar }
-        </div>
+        { avatar }
         <div className="card-content">
             { children }
         </div>
