@@ -32,7 +32,8 @@ class List extends React.Component {
     let filteredPeople = people;
     if (searchText) {
       filteredPeople = filteredPeople.filter(p =>
-        p.lastName.indexOf(searchText) >= 0 || p.firstName.indexOf(searchText) >= 0);
+        p.lastName.toUpperCase().indexOf(searchText.toUpperCase()) >= 0
+        || p.firstName.toUpperCase().indexOf(searchText) >= 0);
     }
 
     return filteredPeople.sort(sortPeople);
