@@ -16,7 +16,7 @@ class Random extends React.Component {
     _updatePeople = () => {
         const {people} = this.props;
         this.setState({ personIndex: Math.floor(Math.random() * people.length) });
-    }
+    };
 
     componentWillUnmount() {
         clearInterval(this.intervalId);
