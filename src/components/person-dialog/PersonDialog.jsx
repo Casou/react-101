@@ -31,12 +31,9 @@ const PersonDialog = ({ open, handleClose, person }) => {
         <div id={"person-dialog__head"}>
           <div id={"person-dialog__head-img"}>
             <img src={ photo } alt={ photo } />
-            <h1>{person.name} {person.surname}</h1>
+            <h1>{person.firstName} {person.lastName}</h1>
             <h2>
               {person.job}
-              <Link href={`/people/edit/${person.id}`}>
-                <Icon className={"edit_icon"}>edit</Icon>
-              </Link>
             </h2>
           </div>
 
