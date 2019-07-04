@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      people: null
+      people: []
     };
   }
 
@@ -24,7 +24,7 @@ class App extends React.Component {
         <main>
           <Switch>
             <Route path="/" exact render={() => <List people={people}/>}/>
-            <Route path="/random" component={() => <Random people={people}/>}/>
+            <Route path="/random" render={() => <Random people={people}/>}/>
             <Redirect from="*" to="/"/>
           </Switch>
         </main>
