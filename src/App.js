@@ -33,7 +33,7 @@ class App extends React.Component {
             :
             <Switch>
               <Route path="/" exact render={() => <List people={people}/>}/>
-              <Route path="/random" component={() => <Random people={people}/>}/>
+              <Route path="/random" render={() => <Random people={people}/>}/>
               <Redirect from="*" to="/"/>
             </Switch>
           }
