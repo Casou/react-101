@@ -27,7 +27,7 @@ class Random extends React.Component {
         const { personIndex } = this.state;
 
         return (
-            <PersonCard person={people[personIndex]} />
+            <PersonCard person={people[personIndex] || {}} />
         );
     };
 }
