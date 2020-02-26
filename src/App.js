@@ -15,7 +15,7 @@ const App = () => (
     <main>
       <Switch>
         <Route path="/" exact render={() => <List people={people}/>}/>
-        <Route path="/random" component={() => <Random people={people}/>}/>
+        <Route path="/random" render={() => <Random people={people}/>}/>
         <Route path="/people/:id" render={(props) =>
           <SinglePeople person={people.find(p => p.id === parseInt(props.match.params.id))}/>
         } />
