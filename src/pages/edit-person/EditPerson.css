@@ -29,3 +29,8 @@
 	width : 100%;
 	text-align: right;
 }
+
+.edit-person__save {
+	background-color: #E02705 !important;
+	color: white !important;
+}
