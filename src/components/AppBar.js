@@ -4,7 +4,7 @@ import './AppBar.css';
 const AppBar = () => (
     <nav>
         <div className="nav-wrapper HeaderBar">
-            <img src="/resources/images/logo.png" alt="Proxiad" />
+            <img src="/resources/images/logo.png" alt="Atecna" />
         </div>
     </nav>
 );
