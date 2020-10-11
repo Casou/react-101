@@ -4,7 +4,7 @@ import './Card.css';
 const Card = ({ person }) => (
     <section className="card person-card class-to-remove">
         <div className="card-image">
-            <img src="https://uinames.com/api/photos/female/1.jpg" alt="Avatar" />
+            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Avatar" />
         </div>
         <div className="card-content">
             <div className="card-title">
@@ -16,8 +16,8 @@ const Card = ({ person }) => (
             <div className="card-info">
                 <i className="material-icons" title="email">email</i>
                 <span>
-                    <a href="mailto:s.tixier@proxiad.com">
-                        s.tixier@proxiad.com
+                    <a href="mailto:s.tixier@atecna.com">
+                        s.tixier@atecna.com
                     </a>
                 </span>
             </div>
