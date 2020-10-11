@@ -3,7 +3,7 @@ import './Card.css';
 
 const Avatar = ({ pictureIndex }) => (
     <div className="card-image">
-        <img src={ `https://uinames.com/api/photos/female/${ pictureIndex }.jpg` } alt="Avatar" />
+        <img src={ `https://randomuser.me/api/portraits/women/${ pictureIndex }.jpg` } alt="Avatar" />
     </div>
 );
 
