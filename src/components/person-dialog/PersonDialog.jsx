@@ -10,7 +10,8 @@ const PersonDialog = ({ open, handleClose, person }) => {
     return "";
   }
 
-  const photo = `https://uinames.com/api/photos/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex }.jpg`;
+  const sex = person.sex === 1 ? "men" : "women";
+  const photo = `https://randomuser.me/api/portraits/${sex}/${person.pictureIndex}.jpg`;
 
   const birthdate = lpad(person.birthDate[2]) + "/" + lpad(person.birthDate[1]) + "/" + lpad(person.birthDate[0]);
   const arrivalDate = lpad(person.arrivalDate[2]) + "/" + lpad(person.arrivalDate[1]) + "/" + lpad(person.arrivalDate[0]);
@@ -26,7 +27,7 @@ const PersonDialog = ({ open, handleClose, person }) => {
       maxWidth={'md'}
     >
       <DialogContent classes={{root : "person-dialog__content"}}>
-        <div id="person-dialog__background"><div id="person-dialog__background-overlay"></div></div>
+        <div id="person-dialog__background"></div>
         <div id={"person-dialog__head"}>
           <div id={"person-dialog__head-img"}>
             <img src={ photo } alt={ photo } />

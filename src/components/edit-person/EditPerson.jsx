@@ -27,7 +27,8 @@ class EditPerson extends React.Component {
       return <Redirect to='/'/>
     }
 
-    const photo = `https://uinames.com/api/photos/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex }.jpg`;
+    const sex = person.sex === 1 ? "men" : "women";
+    const photo = `https://randomuser.me/api/portraits/${sex}/${person.pictureIndex}.jpg`;
     return (
       <Card classes={{root: "edit-person"}}>
         <CardContent>
