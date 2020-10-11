@@ -45,7 +45,8 @@ class EditPerson extends React.Component {
       return <Redirect to='/'/>
     }
 
-    const photo = `https://uinames.com/api/photos/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex }.jpg`;
+    const sex = person.sex === 1 ? "men" : "women";
+    const photo = `https://randomuser.me/api/portraits/${sex}/${person.pictureIndex}.jpg`;
 
     return (
       <Card classes={{root: "edit-person"}}>
@@ -68,7 +69,7 @@ class EditPerson extends React.Component {
           </section>
         </CardContent>
         <CardActions classes={{root: "edit-person__actions"}}>
-          <Button variant="contained" color="primary" onClick={this.save}>
+          <Button variant="contained" className="edit-person__save" onClick={this.save}>
             Enregistrer
           </Button>
         </CardActions>
