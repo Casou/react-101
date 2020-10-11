@@ -1,5 +1,5 @@
 .HeaderBar {
-	background-color: #275aab;
+	background: linear-gradient(229deg, #FF7000 0%, #E70700 100%);
 	color: white;
 	font-weight : bold;
 }
