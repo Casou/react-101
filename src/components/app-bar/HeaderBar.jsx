@@ -9,7 +9,7 @@ const HeaderBar = () => {
 		<AppBar position="static" classes={{ root : "HeaderBar"}}>
 			<Toolbar>
 				<h1>
-					<img src={"/resources/images/logo.png"} alt={"Proxiad"} />
+					<img src={"/resources/images/logo.png"} alt={"Atecna"} />
 				</h1>
 
 				<nav>
