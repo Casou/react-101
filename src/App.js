@@ -2,8 +2,8 @@ import React from 'react';
 
 const App = () => (
   <div className="App">
-    <header>Insérez votre AppBar ici</header>
-    <main>Insérez votre Card ici</main>
+    <header>Insérez votre COMPOSANT AppBar ici</header>
+    <main>Insérez votre COMPOSANT Card ici</main>
   </div>
 );
 
