@@ -1,6 +1,6 @@
 .edit-person {
 	width : 800px;
-	margin: auto;
+	margin: 40px auto;
 	padding : 30px;
 }
 
@@ -28,4 +28,9 @@
 	display : inline-block !important;
 	width : 100%;
 	text-align: right;
+}
+
+.edit-person__save {
+	background-color: #E02705 !important;
+	color: white !important;
 }

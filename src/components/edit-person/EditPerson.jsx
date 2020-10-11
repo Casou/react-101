@@ -45,7 +45,7 @@ class EditPerson extends React.Component {
           </section>
         </CardContent>
         <CardActions classes={{root: "edit-person__actions"}}>
-          <Button variant="contained" color="primary" onClick={this.save}>
+          <Button variant="contained" className="edit-person__save" onClick={this.save}>
             Enregistrer
           </Button>
         </CardActions>
