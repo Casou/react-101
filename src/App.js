@@ -5,11 +5,15 @@ import List from 'pages/List.jsx';
 import Random from 'pages/Random.jsx';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {CircularProgress} from "@material-ui/core";
-
-import "./App.css";
 import EditPerson from "./components/edit-person/EditPerson";
 
+import "./App.css";
+
+import {connect} from 'react-redux';
+import { fetchPeople } from 'store/actions';
+
 class App extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -18,9 +22,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/api/people")
-      .then(response => response.json())
-      .then(data => this.setState({ people : data }));
+    this.props.fetchPeople();
   }
 
   _onSave = (person) => {
@@ -32,7 +34,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { people } = this.state;
+    const { people } = this.props;
     return (
       <div className="App">
         <header>
@@ -57,4 +59,14 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  people : state.people
+});
+
+const mapDispatchToProps = {
+  fetchPeople
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps)(App);
