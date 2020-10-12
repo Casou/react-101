@@ -7,5 +7,5 @@ const initialStore = {
     people: []
 };
 
-export const store = createStore(people, initialStore, 
+export const store = createStore(people, initialStore,
     composeWithDevTools(applyMiddleware(thunk)));
