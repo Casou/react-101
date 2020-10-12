@@ -41,7 +41,7 @@ class App extends React.Component {
               <Route path="/" exact render={() => <List people={people}/>}/>
               <Route path="/random" component={() => <Random people={people}/>}/>
               <Route path="/people/edit/:id" component={(props) =>
-                <EditPerson person={people.find(p => p.id === parseInt(props.match.params.id))}
+                <EditPerson person={{ ...people.find(p => p.id === parseInt(props.match.params.id)) }}
                             onSave={this._onSave} />}/>
               <Redirect from="*" to="/"/>
             </Switch>
