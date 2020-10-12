@@ -11,7 +11,7 @@ class EditPerson extends React.Component {
     super(props);
 
     this.state = {
-      person: props.person,
+      person: {...props.person},
       redirect: false
     };
   }
