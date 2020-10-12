@@ -9,9 +9,6 @@ import EditPerson from "./components/edit-person/EditPerson";
 
 import "./App.css";
 
-import {connect} from 'react-redux';
-import { fetchPeople } from 'store/actions';
-
 class App extends React.Component {
 
   constructor(props) {
@@ -22,7 +19,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchPeople();
+    // Supprimer ce fetch pour passer par le store (qui alimentera les props du composant)
+    fetch("/api/people")
+      .then(response => response.json())
+      .then(data => this.setState({ people : data }));
   }
 
   _onSave = (person) => {
@@ -34,7 +34,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { people } = this.props;
+    const { people } = this.state;
     return (
       <div className="App">
         <header>
@@ -59,14 +59,4 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  people : state.people
-});
-
-const mapDispatchToProps = {
-  fetchPeople
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps)(App);
+export default App;
