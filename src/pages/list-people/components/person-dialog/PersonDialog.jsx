@@ -4,6 +4,7 @@ import {Dialog, DialogContent, Icon, Link} from "@material-ui/core";
 import {lpad} from "common";
 
 import "./PersonDialog.css";
+import {NavLink} from "react-router-dom";
 
 const PersonDialog = ({ open, handleClose, person }) => {
 	if (!person) {
@@ -34,9 +35,9 @@ const PersonDialog = ({ open, handleClose, person }) => {
 						<h1>{person.name} {person.surname}</h1>
 						<h2>
 							{person.job}
-							<Link href={`/people/edit/${person.id}`}>
+							<NavLink to={`/people/edit/${person.id}`}>
 								<Icon className={"edit_icon"}>edit</Icon>
-							</Link>
+							</NavLink>
 						</h2>
 					</div>
 
