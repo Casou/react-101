@@ -7,10 +7,7 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import {CircularProgress} from "@material-ui/core";
 import EditPerson from "./components/edit-person/EditPerson";
 
-import {connect} from 'react-redux';
-
 import "./App.css";
-import { fetchPeople } from 'store/actions';
 
 import {connect} from 'react-redux';
 import { fetchPeople } from 'store/actions';
