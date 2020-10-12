@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Dialog, DialogContent, Icon, Link} from "@material-ui/core";
+import {Dialog, DialogContent, Icon} from "@material-ui/core";
 import {lpad} from "common";
 
 import "./PersonDialog.css";
