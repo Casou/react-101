@@ -34,7 +34,7 @@ class App extends React.Component {
           <HeaderBar/>
         </header>
         <main>
-          { !people ?
+          { !people || !people.length ?
             <CircularProgress />
             :
             <Switch>
