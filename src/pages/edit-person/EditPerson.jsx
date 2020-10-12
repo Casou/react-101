@@ -11,11 +11,8 @@ class EditPerson extends React.Component {
 	constructor(props) {
 		super(props);
 
-		const id = parseInt(this.props.match.params.id);
-		const person = this.props.people.find(p => p.id === id);
-
 		this.state = {
-			person,
+			person: props.person,
 			redirect: false
 		};
 	}
@@ -95,7 +92,7 @@ class EditPerson extends React.Component {
 }
 
 EditPerson.propTypes = {
-	people: PropTypes.array.isRequired,
+	person: PropTypes.object.isRequired,
 	onSave: PropTypes.func.isRequired
 };
 
