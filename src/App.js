@@ -28,6 +28,11 @@ class App extends React.Component {
       method: 'PATCH',
       body: JSON.stringify(person),
       headers: { 'Content-Type': 'application/json' }
+    }).then(() => {
+      const { people } = this.state;
+      return new Promise(resolve =>
+        this.setState({ people: [ ...people.filter(p => p.id !== person.id), person ] }, resolve)
+      );
     });
   };
 
