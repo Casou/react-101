@@ -3,14 +3,15 @@ import HeaderBar from 'components/app-bar/HeaderBar';
 
 import List from 'pages/List.jsx';
 import Random from 'pages/Random.jsx';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
 import {CircularProgress} from "@material-ui/core";
 import EditPerson from "./components/edit-person/EditPerson";
 
 import "./App.css";
 
 import {connect} from 'react-redux';
-import { fetchPeople } from 'store/actions';
+import {fetchPeople} from 'store/actions';
+import {updatePerson} from "./store/actions";
 
 class App extends React.Component {
 
@@ -18,12 +19,8 @@ class App extends React.Component {
     this.props.fetchPeople();
   }
 
-  _onSave = (person) => {
-    return fetch(`/api/people/${person.id}`, {
-      method: 'PATCH',
-      body: JSON.stringify(person),
-      headers: { 'Content-Type': 'application/json' }
-    });
+  _onSave = person => {
+    return this.props.updatePerson(person);
   };
 
   render() {
@@ -34,7 +31,7 @@ class App extends React.Component {
           <HeaderBar/>
         </header>
         <main>
-          { !people ?
+          { !people.length ?
             <CircularProgress />
             :
             <Switch>
@@ -56,9 +53,10 @@ const mapStateToProps = state => ({
   people : state.people
 });
 
-const mapDispatchToProps = {
-  fetchPeople
-};
+const mapDispatchToProps = dispatch => ({
+  fetchPeople: () => dispatch(fetchPeople()),
+  updatePerson: (person) => dispatch(updatePerson(person))
+});
 
 export default connect(
   mapStateToProps,
