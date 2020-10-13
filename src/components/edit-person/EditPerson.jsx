@@ -11,22 +11,16 @@ class EditPerson extends React.Component {
     super(props);
 
     this.state = {
-      person: props.person,
-      redirect: false
+      person: { ...props.person }
     };
   }
 
   save = () => {
-    alert("Call onsave method then set redirect to true in state");
+    alert("Call onSave method (passed by props)");
   };
 
   render() {
-    const {person, redirect} = this.state;
-
-    if (redirect) {
-      return <Redirect to='/'/>
-    }
-
+    const {person} = this.state;
     const sex = person.sex === 1 ? "men" : "women";
     const photo = `https://randomuser.me/api/portraits/${sex}/${person.pictureIndex}.jpg`;
     return (
