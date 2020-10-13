@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardContent, CardActions, TextField, Button } from "@material-ui/core";
+import {Button, Card, CardActions, CardContent, TextField} from "@material-ui/core";
 
 import "./EditPerson.css";
 import {withStorePeople} from "../../components/hoc/withStorePeople";
-import {Redirect} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
 class EditPerson extends React.Component {
 
@@ -12,8 +12,7 @@ class EditPerson extends React.Component {
 		super(props);
 
 		this.state = {
-			person: {... props.person},
-			redirect: false
+			person: {... props.person}
 		};
 	}
 
@@ -24,19 +23,15 @@ class EditPerson extends React.Component {
 	};
 
 	save = () => {
-		const { onSave } = this.props;
+		const { onSave, history } = this.props;
 		const { person } = this.state;
 
 		onSave(person)
-			.then(() => this.setState({ redirect : true }));
+			.then(() => history.push("/"));
 	};
 
 	render() {
-		const { person, redirect } = this.state;
-
-		if (redirect) {
-			return <Redirect to='/people' />
-		}
+		const { person } = this.state;
 
 		const sex = person.sex === 1 ? "men" : "women";
 		const photo = `https://randomuser.me/api/portraits/${sex}/${person.pictureIndex}.jpg`;
@@ -96,4 +91,4 @@ EditPerson.propTypes = {
 	onSave: PropTypes.func.isRequired
 };
 
-export default withStorePeople(EditPerson);
+export default withStorePeople(withRouter(EditPerson));
