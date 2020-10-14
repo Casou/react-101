@@ -28,6 +28,18 @@ const Info = ({ icon, children }) => (
     </div>
 );
 
+const Email = ({ mail }) => (
+    <Info icon="email">
+        <a href={ `mailto:${ mail }` }>{ mail }</a>
+    </Info>
+);
+
+const Phone = ({ phone }) => (
+    <Info icon="phone">
+        <a href={ `tel:${ phone }` }>{ phone }</a>
+    </Info>
+);
+
 const Card = ({ avatar, children }) => (
     <section className="card person-card">
         { avatar }
@@ -40,6 +52,7 @@ const Card = ({ avatar, children }) => (
 Card.Avatar = Avatar;
 Card.Title = Title;
 Card.Job = Job;
-Card.Info = Info;
+Card.Email = Email;
+Card.Phone = Phone;
 
 export default Card;
