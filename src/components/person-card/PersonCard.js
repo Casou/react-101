@@ -9,7 +9,7 @@ const PersonCard = ({ person }) => (
       <CardActionArea>
         <CardMedia
           classes={{root : "card_media"}}
-          image={ `https://randomuser.me/api/portraits/${ person.sex === 1 ? "male" : "female" }/${ person.pictureIndex }.jpg` }
+          image={ `https://randomuser.me/api/portraits/${ person.sex === 1 ? "men" : "women" }/${ person.pictureIndex }.jpg` }
           title={`Picture of ${person.firstName}`}
         />
         <CardContent>
