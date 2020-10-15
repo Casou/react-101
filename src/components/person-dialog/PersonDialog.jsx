@@ -10,7 +10,7 @@ const PersonDialog = ({ open, handleClose, person }) => {
     return "";
   }
 
-  const sex = person.sex === 1 ? "male" : "female";
+  const sex = person.sex === 1 ? "men" : "women";
   const photo = `https://randomuser.me/api/portraits/${sex}/${person.pictureIndex}.jpg`;
 
   const birthdate = lpad(person.birthDate[2]) + "/" + lpad(person.birthDate[1]) + "/" + lpad(person.birthDate[0]);
