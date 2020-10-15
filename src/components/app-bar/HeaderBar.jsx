@@ -1,10 +1,11 @@
 import React from 'react';
 
 import './HeaderBar.css';
-import { Toolbar, AppBar } from "@material-ui/core";
-import { NavLink } from 'react-router-dom';
+import {AppBar, Toolbar} from "@material-ui/core";
+import {NavLink} from 'react-router-dom';
+import withClock from "../hoc/withClock";
 
-const HeaderBar = () => {
+const HeaderBar = ({ clock }) => {
 	return (
 		<AppBar position="static" classes={{ root : "HeaderBar"}}>
 			<Toolbar>
@@ -18,9 +19,9 @@ const HeaderBar = () => {
 				</nav>
 			</Toolbar>
 
-			<div id={"timer"}>00:00:00</div>
+			<div id={"timer"}>{ clock.toLocaleTimeString() }</div>
 		</AppBar>
 	);
 };
 
-export default HeaderBar;
+export default withClock(HeaderBar);
