@@ -18,6 +18,7 @@ const HeaderBar = () => {
 				</nav>
 			</Toolbar>
 
+			<div id={"dimensions"}>0 x 0</div>
 			<div id={"timer"}>00:00:00</div>
 		</AppBar>
 	);
