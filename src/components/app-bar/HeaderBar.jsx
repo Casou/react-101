@@ -4,10 +4,10 @@ import './HeaderBar.css';
 import { Toolbar, AppBar } from "@material-ui/core";
 import { NavLink } from 'react-router-dom';
 import Clock from "./Clock";
-import useWindowsWidth from "../hooks/useWindowDimensions";
+import useWindowsDimensions from "../hooks/useWindowDimensions";
 
 const HeaderBar = () => {
-	const { height, width } = useWindowsWidth();
+	const { height, width } = useWindowsDimensions();
 	return (
 		<AppBar position="static" classes={{ root : "HeaderBar"}}>
 			<Toolbar>
