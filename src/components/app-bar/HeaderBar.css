@@ -45,6 +45,7 @@ nav a.active:before {
 	transform: scaleX(1);
 }
 
+#dimensions,
 #timer {
 	position: absolute;
 	right: 30px;
@@ -52,4 +53,11 @@ nav a.active:before {
 	line-height: 65px;
 	font-size: 20px;
 	text-shadow: 2px 2px 3px #333;
+}
+
+#dimensions {
+	right: 135px;
+	background-color: brown;
+	padding: 15px;
+	line-height: 35px;
 }
