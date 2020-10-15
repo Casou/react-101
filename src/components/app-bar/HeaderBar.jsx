@@ -3,6 +3,7 @@ import React from 'react';
 import './HeaderBar.css';
 import { Toolbar, AppBar } from "@material-ui/core";
 import { NavLink } from 'react-router-dom';
+import Clock from "./Clock";
 
 const HeaderBar = () => {
 	return (
@@ -18,7 +19,7 @@ const HeaderBar = () => {
 				</nav>
 			</Toolbar>
 
-			<div id={"timer"}>00:00:00</div>
+			<div id={"timer"}><Clock /></div>
 		</AppBar>
 	);
 };
