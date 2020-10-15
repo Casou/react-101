@@ -4,8 +4,10 @@ import './HeaderBar.css';
 import {AppBar, Toolbar} from "@material-ui/core";
 import {NavLink} from 'react-router-dom';
 import withClock from "../hoc/withClock";
+import useWindowsDimensions from "../hooks/useWindowDimensions";
 
 const HeaderBar = ({ clock }) => {
+	const { width, height } = useWindowsDimensions();
 	return (
 		<AppBar position="static" classes={{ root : "HeaderBar"}}>
 			<Toolbar>
@@ -19,6 +21,7 @@ const HeaderBar = ({ clock }) => {
 				</nav>
 			</Toolbar>
 
+			<div id={"dimensions"}>{ width } x { height }</div>
 			<div id={"timer"}>{ clock.toLocaleTimeString() }</div>
 		</AppBar>
 	);
