@@ -17,6 +17,8 @@ const HeaderBar = () => {
 					<NavLink to={"/random"}>Random</NavLink>
 				</nav>
 			</Toolbar>
+
+			<div id={"timer"}>00:00:00</div>
 		</AppBar>
 	);
 };

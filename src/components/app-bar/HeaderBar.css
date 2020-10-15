@@ -44,3 +44,12 @@ nav a.active:before {
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
+
+#timer {
+	position: absolute;
+	right: 30px;
+	height: 65px;
+	line-height: 65px;
+	font-size: 20px;
+	text-shadow: 2px 2px 3px #333;
+}
