@@ -1,8 +1,11 @@
-function App() {
+import AppBar from "./components/AppBar";
+import Menu from "./components/Menu";
 
+function App() {
   return (
     <div className="App">
-      <h1>The food company</h1>
+      <AppBar />
+      <Menu />
     </div>
   )
 }
