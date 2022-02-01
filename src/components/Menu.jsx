@@ -1,9 +1,9 @@
 import "./Menu.css"
 
-const Menu = () => {
+const Menu = ({ message }) => {
   return (
     <main className="menu">
-      Insérez le message passé en props (ICI)
+      Insérez le message passé en props : { message }
     </main>
   )
 }

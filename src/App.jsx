@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <AppBar />
-      <Menu />
+      <Menu message={MESSAGE} />
     </div>
   )
 }
