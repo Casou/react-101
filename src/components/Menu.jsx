@@ -3,7 +3,7 @@ import "./Menu.css"
 const Menu = () => {
   return (
     <main className="menu">
-      Nos produits : (A venir)
+      Insérez le message passé en props (ICI)
     </main>
   )
 }
