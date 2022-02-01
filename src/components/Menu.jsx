@@ -1,4 +1,5 @@
-import "./Menu.css"
+import "./Menu.css";
+import PropTypes from "prop-types";
 
 const Menu = ({ message }) => {
   return (
@@ -7,5 +8,12 @@ const Menu = ({ message }) => {
     </main>
   )
 }
+
+Menu.propTypes = {
+  message: PropTypes.string
+};
+Menu.defaultProps = {
+  message: "Default message"
+};
 
 export default Menu;
