@@ -1,11 +1,7 @@
-import AppBar from "./components/AppBar";
-import Menu from "./components/Menu";
-
 function App() {
   return (
     <div className="App">
-      <AppBar />
-      <Menu />
+      Point d'entrée: App.jsx
     </div>
   )
 }
