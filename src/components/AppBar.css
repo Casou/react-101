@@ -1,0 +1,9 @@
+.HeaderBar {
+    background: linear-gradient(229deg, #FF7000 0%, #E70700 100%);
+    color: white;
+    font-weight : bold;
+}
+
+.HeaderBar img {
+    height : 60px;
+}
