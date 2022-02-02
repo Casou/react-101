@@ -5,7 +5,9 @@ import Dish from "./Dish";
 const Menu = () => {
   return (
     <main className="menu">
-      <Dish />
+      <Dish>
+
+      </Dish>
     </main>
   )
 }
