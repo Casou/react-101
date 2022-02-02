@@ -1,10 +1,11 @@
 import "./Menu.css";
 import PropTypes from "prop-types";
+import Dish from "./Dish";
 
-const Menu = ({ message }) => {
+const Menu = () => {
   return (
     <main className="menu">
-      Insérez le message passé en props : { message }
+      <Dish />
     </main>
   )
 }
