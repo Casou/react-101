@@ -1,4 +1,5 @@
 import './AppBar.css'
+import Clock from "./Clock";
 
 const AppBar = () => {
   return (
@@ -8,6 +9,10 @@ const AppBar = () => {
         <div className="HeaderBar__companyName">
           <p className="HeaderBar__companyName--title">The Food Company</p>
           <p className="HeaderBar__companyName--slogan">Food is good !</p>
+        </div>
+
+        <div className="HeaderBar__clock">
+          <Clock />
         </div>
       </div>
     </nav>

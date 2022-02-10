@@ -15,6 +15,7 @@ nav {
 
 .HeaderBar__companyName {
     margin-left: 40px;
+    flex: 1;
 }
 .HeaderBar__companyName p {
     margin: 0;
@@ -31,4 +32,9 @@ nav {
 .HeaderBar__companyName--slogan {
     font-size : 16px;
     line-height : 16px;
+}
+
+.HeaderBar__clock {
+    margin-right: 30px;
+    text-shadow: 2px 2px 2px #444;
 }
