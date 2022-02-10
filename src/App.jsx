@@ -14,11 +14,7 @@ function App() {
         <AppBar />
       </header>
       <main>
-        <Menu />
-        <section className="class-to-remove">
-          <p>Object "dish" outline :</p>
-          <pre>{JSON.stringify(recipes[0], null, 2)}</pre>
-        </section>
+        <Menu dish={randomDish} />
       </main>
     </div>
   )

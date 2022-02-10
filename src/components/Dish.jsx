@@ -2,40 +2,79 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "./Dish.css";
 
-const Dish = () => {
+const Picture = ({ dish }) => {
+  return (
+    <div className="card-image">
+      <img src={ dish.thumbnail } alt="Thumbnail" />
+    </div>
+  )
+}
+
+const Title = ({ dish }) => {
+  return (
+    <div className="card-title">
+      { dish.name }
+    </div>
+  )
+}
+
+const Category = ({ dish }) => {
+  return (
+    <div className="card-sub-title">
+      { dish.category }
+    </div>
+  )
+}
+
+const Link = ({ icon, title, href, text }) => {
+  return (
+    <div className="card-info">
+      <i className="material-icons" title={ title }>{ icon }</i>
+      <span>
+          <a href={ href } target="_blank">
+              { text }
+          </a>
+      </span>
+    </div>
+  )
+}
+
+const VideoLink = ({ dish }) => {
+  return (
+    <Link icon={"ondemand_video"}
+          title={"Youtube link"}
+          href={dish.video}
+          text={"Video"}
+    />
+  )
+}
+
+const ThumbnailLink = ({ dish }) => {
+  return (
+    <Link icon={"photo_camera"}
+          title={"Thumbnail"}
+          href={dish.thumbnail}
+          text={"Picture"}
+    />
+  )
+}
+
+const Dish = ({ picture, children }) => {
   return (
     <section className="card dish-card">
-      <div className="card-image">
-        <img src="https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg" alt="Thumbnail" />
-      </div>
+      { picture }
       <div className="card-content">
-        <div className="card-title">
-          Apple Frangipan Tart
-        </div>
-        <div className="card-sub-title">
-          Category: Dessert
-        </div>
-        <div className="card-info">
-          <i className="material-icons" title="Youtube link">link</i>
-          <span>
-              <a href="https://www.youtube.com/watch?v=rp8Slv4INLk" target="_blank">
-                  Video
-              </a>
-          </span>
-        </div>
-
-        <div className="card-info">
-          <i className="material-icons" title="Thumbnail">photo_camera</i>
-          <span>
-              <a href="https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg" target="_blank">
-                Picture
-              </a>
-          </span>
-        </div>
+        { children }
       </div>
     </section>
   )
 };
+
+Dish.Picture = Picture;
+Dish.Title = Title;
+Dish.Category = Category;
+Dish.VideoLink = VideoLink;
+Dish.ThumbnailLink = ThumbnailLink;
 
 Dish.propTypes = {};
 Dish.defaultProps = {};
