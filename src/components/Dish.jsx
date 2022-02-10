@@ -16,7 +16,7 @@ const Dish = () => {
           Category: Dessert
         </div>
         <div className="card-info">
-          <i className="material-icons" title="Youtube link">link</i>
+          <i className="material-icons" title="Youtube link">ondemand_video</i>
           <span>
               <a href="https://www.youtube.com/watch?v=rp8Slv4INLk" target="_blank">
                   Video
