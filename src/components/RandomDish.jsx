@@ -1,48 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import recipes from "../_data/recipes.json";
 import Dish from "./Dish";
 
-class RandomDish extends React.Component {
+const RandomDish = ({recipes}) => {
+  const [dishId, setDishId] = useState(Math.floor(Math.random() * recipes.length));
 
-  constructor(props) {
-    super(props);
+  useEffect(() => {
+    const intervalId = setInterval(_updateDish, 2000);
 
-    this.state = {
-      dishId: 0
-    };
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const _updateDish = () => {
+    setDishId(Math.floor(Math.random() * recipes.length));
   }
 
-  componentDidMount() {
-    this.intervalId = setInterval(this._updateDish, 2000);
-  }
+  const randomDish = recipes[dishId];
 
-  _updateDish = () => {
-    this.setState({
-      dishId: Math.floor(Math.random() * recipes.length)
-    })
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalId);
-  }
-
-
-  render() {
-    const { recipes } = this.props;
-    const { dishId } = this.state;
-
-    const randomDish = recipes[dishId];
-
-    return (
-      <Dish picture={<Dish.Picture dish={randomDish}/>}>
-        <Dish.Title dish={randomDish}/>
-        <Dish.Category dish={randomDish}/>
-        <Dish.VideoLink dish={randomDish}/>
-        <Dish.ThumbnailLink dish={randomDish}/>
-      </Dish>
-    )
-  }
+  return (
+    <Dish picture={<Dish.Picture dish={randomDish}/>}>
+      <Dish.Title dish={randomDish}/>
+      <Dish.Category dish={randomDish}/>
+      <Dish.VideoLink dish={randomDish}/>
+      <Dish.ThumbnailLink dish={randomDish}/>
+    </Dish>
+  )
 }
 
 RandomDish.propTypes = {

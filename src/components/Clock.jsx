@@ -1,38 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 
 import "./Clock.css"
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
+const Clock = () => {
+  const [currentTime, setCurrentTime] = useState(new Date())
 
-    this.state = {
-      currentTime: new Date()
-    };
-  }
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
 
-  componentDidMount() {
-    this.intervalId = setInterval(() => {
-      this.setState({
-        currentTime: new Date()
-      })
+      return () => clearInterval(intervalId);
     }, 1000);
-  }
 
-  componentWillUnmount() {
-    clearInterval(this.intervalId);
-  }
 
-  render() {
-    const { currentTime } = this.state;
+  }, []);
 
-    return (
-      <span className="clock__value">
-        { currentTime.toLocaleTimeString() }
-      </span>
-    )
-  }
+  return (
+    <span className="clock__value">
+      {currentTime.toLocaleTimeString()}
+    </span>
+  )
 }
 
 Clock.propTypes = {};
