@@ -9,13 +9,19 @@ class Clock extends React.Component {
 
     this.state = {
       currentTime: new Date()
-    }
+    };
+  }
 
-    setInterval(() => {
+  componentDidMount() {
+    this.intervalId = setInterval(() => {
       this.setState({
         currentTime: new Date()
       })
-    }, 1000)
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
   }
 
   render() {
