@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types';
 import "./Menu.css";
 import Dish from "./Dish";
+import RandomDish from "./RandomDish";
 
-const Menu = ({ dish }) => {
+const Menu = ({ recipes }) => {
   return (
     <div className="menu">
-      <Dish picture={<Dish.Picture dish={dish} />}>
-        <Dish.Title dish={dish} />
-        <Dish.Category dish={dish} />
-        <Dish.VideoLink dish={dish} />
-        <Dish.ThumbnailLink dish={dish} />
-      </Dish>
+      <RandomDish recipes={recipes} />
     </div>
   )
 }
