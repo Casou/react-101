@@ -1,22 +1,16 @@
+import PropTypes from 'prop-types';
 import "./Menu.css";
-import PropTypes from "prop-types";
 import Dish from "./Dish";
 
 const Menu = () => {
   return (
-    <main className="menu">
-      <Dish>
-
-      </Dish>
-    </main>
+    <div className="menu">
+      <Dish />
+    </div>
   )
 }
 
-Menu.propTypes = {
-  message: PropTypes.string
-};
-Menu.defaultProps = {
-  message: "Default message"
-};
+Menu.propTypes = {};
+Menu.defaultProps = {};
 
 export default Menu;
