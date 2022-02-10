@@ -7,7 +7,7 @@ const AppBar = () => {
         <img src="/images/logo.png" alt="The Food Company"/>
         <div className="HeaderBar__companyName">
           <p className="HeaderBar__companyName--title">The Food Company</p>
-          <p className="HeaderBar__companyName--slogan">La bouffe, c'est ouf !</p>
+          <p className="HeaderBar__companyName--slogan">Food is good !</p>
         </div>
       </div>
     </nav>

@@ -2,9 +2,9 @@ import AppBar from "./components/AppBar";
 import Menu from "./components/Menu";
 
 const DISH = {
-  name: "Paëlla",
-  people: 4,
-  link: "https://www.marmiton.org/recettes/recette_paella-fruits-de-mer-chorizo-et-poulet-de-patou_50730.aspx"
+  name: "Apple Frangipane Tart",
+  people: 6,
+  link: "https://www.baking-sense.com/2017/10/31/apple-frangipan-tart/"
 };
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
             link={DISH.link}
       />
 
+      <hr/>
       {/* Autre solution : */}
       <Menu { ...DISH } />
     </div>

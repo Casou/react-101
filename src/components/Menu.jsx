@@ -6,13 +6,13 @@ const Menu = ({ name, people, link }) => {
     <main className="menu">
       <main className="menu">
         <p>
-          Nom du plat : { name }
+          Dish name : { name }
         </p>
         <p>
-          Nombre de personnes : { people }
+          People : { people }
         </p>
         <p>
-          Lien : { link?.toUpperCase() }
+          Link : { link?.toUpperCase() }
         </p>
       </main>
     </main>
