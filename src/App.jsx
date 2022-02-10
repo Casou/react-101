@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-      Point d'entrée: App.jsx
+      Entrypoint: App.jsx
     </div>
   )
 }
