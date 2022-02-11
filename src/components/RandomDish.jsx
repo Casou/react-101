@@ -1,20 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Dish from "./Dish";
 
 const RandomDish = ({recipes}) => {
-  const [dishId, setDishId] = useState(Math.floor(Math.random() * recipes.length));
-
-  useEffect(() => {
-    const intervalId = setInterval(_updateDish, 2000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  const _updateDish = () => {
-    setDishId(Math.floor(Math.random() * recipes.length));
-  }
-
+  // Fix the dish id for the exercise
+  const dishId = 0;
   const randomDish = recipes[dishId];
 
   return (
@@ -23,6 +13,7 @@ const RandomDish = ({recipes}) => {
       <Dish.Category dish={randomDish}/>
       <Dish.VideoLink dish={randomDish}/>
       <Dish.ThumbnailLink dish={randomDish}/>
+      <Dish.Tags dish={randomDish}/>
     </Dish>
   )
 }

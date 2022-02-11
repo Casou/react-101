@@ -59,6 +59,14 @@ const ThumbnailLink = ({ dish }) => {
   )
 }
 
+const Tags = ({ dish }) => {
+  return (
+    <p>
+      Tags : ...
+    </p>
+  )
+}
+
 const Dish = ({ picture, children }) => {
   return (
     <section className="card dish-card">
@@ -75,6 +83,7 @@ Dish.Title = Title;
 Dish.Category = Category;
 Dish.VideoLink = VideoLink;
 Dish.ThumbnailLink = ThumbnailLink;
+Dish.Tags = Tags;
 
 Dish.propTypes = {};
 Dish.defaultProps = {};
