@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import recipes from "../_data/recipes.json";
 import Dish from "./Dish";
 
 const RandomDish = ({recipes}) => {
