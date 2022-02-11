@@ -62,7 +62,13 @@ const ThumbnailLink = ({ dish }) => {
 const Tags = ({ dish }) => {
   return (
     <p>
-      Tags : ...
+      Tags : {
+        dish.tags
+          .filter(tag => tag !== "Baking")
+          .map(tag => `#${ tag.toLowerCase() }`)
+          .sort()
+          .join(" ")
+      }
     </p>
   )
 }
