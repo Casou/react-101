@@ -1,38 +1,17 @@
 import PropTypes from 'prop-types';
 import "./Menu.css";
-import Dish from "./Dish";
+import DishCard from "./DishCard";
 
 const Menu = ({recipes}) => {
+    const sortedRecipes = recipes
+        .sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name))
     return (
         <div className="menu">
-            <Dish picture={<Dish.Picture dish={recipes[0]}/>}>
-                <Dish.Title dish={recipes[0]}/>
-                <Dish.Category dish={recipes[0]}/>
-                <Dish.VideoLink dish={recipes[0]}/>
-                <Dish.ThumbnailLink dish={recipes[0]}/>
-                <Dish.Tags dish={recipes[0]}/>
-            </Dish>
-            <Dish picture={<Dish.Picture dish={recipes[1]}/>}>
-                <Dish.Title dish={recipes[1]}/>
-                <Dish.Category dish={recipes[1]}/>
-                <Dish.VideoLink dish={recipes[1]}/>
-                <Dish.ThumbnailLink dish={recipes[1]}/>
-                <Dish.Tags dish={recipes[1]}/>
-            </Dish>
-            <Dish picture={<Dish.Picture dish={recipes[2]}/>}>
-                <Dish.Title dish={recipes[2]}/>
-                <Dish.Category dish={recipes[2]}/>
-                <Dish.VideoLink dish={recipes[2]}/>
-                <Dish.ThumbnailLink dish={recipes[2]}/>
-                <Dish.Tags dish={recipes[2]}/>
-            </Dish>
-            <Dish picture={<Dish.Picture dish={recipes[3]}/>}>
-                <Dish.Title dish={recipes[3]}/>
-                <Dish.Category dish={recipes[3]}/>
-                <Dish.VideoLink dish={recipes[3]}/>
-                <Dish.ThumbnailLink dish={recipes[3]}/>
-                <Dish.Tags dish={recipes[3]}/>
-            </Dish>
+            {
+                sortedRecipes.map(recipe =>
+                    <DishCard recipe={ recipe } key={`recipe-${ recipe.id }`} />
+                )
+            }
         </div>
     )
 }
