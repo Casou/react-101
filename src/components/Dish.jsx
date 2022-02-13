@@ -75,7 +75,7 @@ const Tags = ({ dish }) => {
 
 const Dish = ({ picture, children }) => {
   return (
-    <section className="card dish-card">
+    <section className="card">
       { picture }
       <div className="card-content">
         { children }
