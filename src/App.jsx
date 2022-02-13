@@ -1,8 +1,7 @@
 import AppBar from "./components/AppBar";
-import Menu from "./components/Menu";
 
 import "./App.css"
-import recipes from './_data/recipes.json';
+import {Outlet} from "react-router-dom";
 
 function App() {
   return (
@@ -11,7 +10,13 @@ function App() {
         <AppBar />
       </header>
       <main>
-        <Menu recipes={recipes} />
+          <Outlet />
+
+          {/*Second solution : with the nested routes inside the child component*/}
+          {/*<Routes>*/}
+          {/*    <Route path={"/menu"} element={<Menu />} />*/}
+          {/*    <Route path={"/random"} element={<RandomDish />} />*/}
+          {/*</Routes>*/}
       </main>
     </div>
   )
