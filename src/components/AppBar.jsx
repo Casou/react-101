@@ -13,8 +13,9 @@ const AppBar = () => {
         </div>
 
         <ul id={"header__navigationLinks"}>
-          <li><NavLink to={"/menu"} className={({isActive}) => isActive && "selected"}>Menu</NavLink></li>
-          <li><NavLink to={"/random"} className={({isActive}) => isActive && "selected"}>Random dish</NavLink></li>
+          <li><NavLink to={"/menu"} className={({isActive}) => isActive ? "selected" : ""} end>Menu</NavLink></li>
+          <li><NavLink to={"/random"} className={({isActive}) => isActive ? "selected" : ""}>Random dish</NavLink></li>
+          <li><NavLink to={"/menu/52976"} className={({isActive}) => isActive ? "selected" : ""}>First dish</NavLink></li>
         </ul>
 
         <div className="HeaderBar__clock">

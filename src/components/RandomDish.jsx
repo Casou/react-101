@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import "./Menu.css";
 import DishCard from "./DishCard";
 
 import recipes from '../_data/recipes.json';
@@ -7,7 +6,7 @@ import recipes from '../_data/recipes.json';
 const Menu = () => {
     const recipe = recipes[Math.round(Math.random() * recipes.length)];
     return (
-        <div className="menu">
+        <div>
             <DishCard recipe={recipe} />
         </div>
     )

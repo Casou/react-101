@@ -11,12 +11,6 @@ function App() {
       </header>
       <main>
           <Outlet />
-
-          {/*Second solution : with the nested routes inside the child component*/}
-          {/*<Routes>*/}
-          {/*    <Route path={"/menu"} element={<Menu />} />*/}
-          {/*    <Route path={"/random"} element={<RandomDish />} />*/}
-          {/*</Routes>*/}
       </main>
     </div>
   )
