@@ -16,10 +16,10 @@ function App() {
       <main>
         <Routes>
           <Route path={"/menu"}>
-            <Route index element={<Menu />} />
-            <Route path={":id"} element={<SingleDish />} />
+            <Route index element={<Menu recipes={[]} />} />
+            <Route path={":id"} element={<SingleDish recipes={[]} />} />
           </Route>
-          <Route path={"/random"} element={<RandomDish />} />
+          <Route path={"/random"} element={<RandomDish recipes={[]} />} />
         </Routes>
       </main>
     </div>

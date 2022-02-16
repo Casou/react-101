@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import recipes from "../_data/recipes.json";
 import DishCard from "./DishCard";
 import {useParams} from "react-router-dom";
 
-const SingleDish = () => {
+const SingleDish = ({ recipes }) => {
   const { id } = useParams()
   const recipe = recipes.find(r => r.id === id);
   if (!recipe) {
