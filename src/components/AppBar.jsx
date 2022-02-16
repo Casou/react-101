@@ -1,6 +1,5 @@
 import './AppBar.css'
 import Clock from "./Clock";
-import {NavLink} from "react-router-dom";
 
 const AppBar = () => {
   return (
@@ -13,9 +12,11 @@ const AppBar = () => {
         </div>
 
         <ul id={"header__navigationLinks"}>
-          <li><NavLink to={"/menu"} className={({isActive}) => isActive ? "selected" : ""} end>Menu</NavLink></li>
-          <li><NavLink to={"/random"} className={({isActive}) => isActive ? "selected" : ""}>Random dish</NavLink></li>
-          <li><NavLink to={"/menu/52976"} className={({isActive}) => isActive ? "selected" : ""}>First dish</NavLink></li>
+          {/*
+
+          Créer les liens ici
+
+          */}
         </ul>
 
         <div className="HeaderBar__clock">

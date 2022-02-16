@@ -8,17 +8,7 @@ import SingleDish from "./components/SingleDish";
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path={"/"} element={<App/>}>
-                    <Route path={"/menu"}>
-                      <Route index element={<Menu />} />
-                      <Route path={":id"} element={<SingleDish />} />
-                    </Route>
-                    <Route path={"/random"} element={<RandomDish />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+      <App/>
     </React.StrictMode>,
     document.getElementById('root')
 )

@@ -1,7 +1,7 @@
 import AppBar from "./components/AppBar";
 
 import "./App.css"
-import {Outlet} from "react-router-dom";
+import Menu from "./components/Menu";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <AppBar />
       </header>
       <main>
-          <Outlet />
+          <Menu />
       </main>
     </div>
   )
