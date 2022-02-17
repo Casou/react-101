@@ -1,7 +1,7 @@
 import AppBar from "./components/AppBar";
 
 import "./App.css"
-import {Routes, Route} from "react-router-dom";
+import {Navigate, Routes, Route} from "react-router-dom";
 import Menu from "./components/Menu";
 import SingleDish from "./components/SingleDish";
 import RandomDish from "./components/RandomDish";
@@ -20,6 +20,8 @@ function App() {
             <Route path={":id"} element={<SingleDish recipes={[]} />} />
           </Route>
           <Route path={"/random"} element={<RandomDish recipes={[]} />} />
+
+          <Route path="*" element={<Navigate to="/menu" replace />} />
         </Routes>
       </main>
     </div>
