@@ -1,12 +1,11 @@
-import AppBar from "./components/AppBar";
-
-import "./App.css"
-import {Navigate, Routes, Route} from "react-router-dom";
-import Menu from "./components/Menu";
-import SingleDish from "./components/SingleDish";
-import RandomDish from "./components/RandomDish";
 import React, {useEffect, useState} from "react";
-import Loader from "./components/Loader";
+import {Navigate, Routes, Route} from "react-router-dom";
+import "./App.css"
+import AppBar from "./common/components/AppBar";
+import Loader from "./common/components/Loader";
+import Menu from "./pages/Menu";
+import SingleDish from "./pages/SingleDish";
+import RandomDish from "./pages/RandomDish";
 
 function App() {
   const [ recipes, setRecipes ] = useState(null);

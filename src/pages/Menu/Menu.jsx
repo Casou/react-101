@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import "./Menu.css";
-import DishCard from "./DishCard";
+import DishCard from "../../common/components/DishCard";
+import DishType from "../../types/DishType"
 
 const Menu = ({ recipes }) => {
     const sortedRecipes = recipes
@@ -16,7 +17,9 @@ const Menu = ({ recipes }) => {
     )
 }
 
-Menu.propTypes = {};
+Menu.propTypes = {
+    recipes: PropTypes.arrayOf(DishType).isRequired
+};
 Menu.defaultProps = {};
 
 export default Menu;

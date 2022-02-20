@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DishCard from "./DishCard";
 import {useParams} from "react-router-dom";
+import DishType from "../../types/DishType";
+import DishCard from "../../common/components/DishCard";
 
 const SingleDish = ({ recipes }) => {
   const { id } = useParams()
@@ -17,7 +18,9 @@ const SingleDish = ({ recipes }) => {
   );
 };
 
-SingleDish.propTypes = {};
+SingleDish.propTypes = {
+  recipes: PropTypes.arrayOf(DishType).isRequired
+};
 SingleDish.defaultProps = {};
 
 export default SingleDish;
