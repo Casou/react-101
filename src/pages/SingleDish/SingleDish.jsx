@@ -6,7 +6,7 @@ import DishCard from "@/common/components/DishCard";
 
 const SingleDish = ({ recipes }) => {
   const { id } = useParams()
-  const recipe = recipes.find(r => r.id === id);
+  const recipe = recipes.find(r => r.id === +id);
   if (!recipe) {
     return "Not found";
   }
