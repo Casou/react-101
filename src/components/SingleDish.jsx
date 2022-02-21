@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom";
 
 const SingleDish = ({ recipes }) => {
   const { id } = useParams()
-  const recipe = recipes.find(r => r.id === id);
+  const recipe = recipes.find(r => r.id === +id);
   if (!recipe) {
     return "Not found";
   }
