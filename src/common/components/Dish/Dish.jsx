@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from "./Dish.module.css";
+import classnames from "classnames";
 
 const Dish = ({picture, children, onClick}) => {
   return (
-    <section className={"card " + styles.card} onClick={onClick}>
+    <section onClick={onClick}
+             className={
+               classnames("card", styles.card, {
+                 [styles["card__clickable"]]: !!onClick
+               })}
+    >
       {picture}
       <div className={"card-content " + styles["card-content"]}>
         {children}
