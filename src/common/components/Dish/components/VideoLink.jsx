@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DishLink from "./DishLink";
 import IconedText from "./IconedText";
+import DishType from "@/types/DishType";
 
 const VideoLink = ({dish}) => {
   if (!dish.video) {
@@ -22,7 +23,7 @@ const VideoLink = ({dish}) => {
 };
 
 VideoLink.propTypes = {
-  dish: PropTypes.object.isRequired,
+  dish: DishType.isRequired,
 };
 VideoLink.defaultProps = {};
 

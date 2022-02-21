@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DishType from "@/types/DishType";
 
 const FORBIDDEN_TAG = "Baking";
 
@@ -18,7 +19,7 @@ const Tags = ({ dish }) => {
 };
 
 Tags.propTypes = {
-  dish: PropTypes.object.isRequired
+  dish: DishType.isRequired
 };
 Tags.defaultProps = {};
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DishType from "@/types/DishType";
 
 const Picture = ({ dish }) => {
   return (
@@ -10,7 +11,7 @@ const Picture = ({ dish }) => {
 };
 
 Picture.propTypes = {
-  dish: PropTypes.object.isRequired,
+  dish: DishType.isRequired,
 };
 Picture.defaultProps = {};
 

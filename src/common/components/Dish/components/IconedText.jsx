@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from "../Dish.module.css"
 
 const IconedText = ({icon, title, children}) => {
   return (
     <div className="card-info">
-      <i className="material-icons" title={title}>{icon}</i>
+      <i className={"material-icons " + styles["material-icons"]} title={title}>{icon}</i>
       <span>
           {children}
       </span>

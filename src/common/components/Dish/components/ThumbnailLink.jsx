@@ -1,6 +1,6 @@
 import React from 'react';
 import DishLink from "./DishLink";
-import DishType from "../../../../types/DishType"
+import DishType from "@/types/DishType"
 
 const ThumbnailLink = ({dish}) => {
   return (

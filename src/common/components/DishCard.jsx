@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dish from "./Dish";
+import DishType from "@/types/DishType";
 
 const DishCard = ({ recipe }) => {
     return (
@@ -15,7 +16,7 @@ const DishCard = ({ recipe }) => {
 };
 
 DishCard.propTypes = {
-    recipe: PropTypes.object.isRequired
+    recipe: DishType.isRequired
 };
 DishCard.defaultProps = {};
 

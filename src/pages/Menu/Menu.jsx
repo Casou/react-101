@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import "./Menu.css";
-import DishCard from "../../common/components/DishCard";
-import DishType from "../../types/DishType"
+import styles from "./Menu.module.css";
+import DishCard from "@/common/components/DishCard";
+import DishType from "@/types/DishType"
 
 const Menu = ({ recipes }) => {
     const sortedRecipes = recipes
         .sort((a, b) => a.name.localeCompare(b.name))
     return (
-        <div className="menu">
+        <div className={styles.menu}>
             {
                 sortedRecipes.map(recipe =>
                     <DishCard recipe={ recipe } key={`recipe-${ recipe.id }`} />

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./Dish.css";
+import styles from "./Dish.module.css";
 
 const Dish = ({picture, children}) => {
   return (
-    <section className="card">
+    <section className={"card " + styles.card}>
       {picture}
-      <div className="card-content">
+      <div className={"card-content " + styles["card-content"]}>
         {children}
       </div>
     </section>
