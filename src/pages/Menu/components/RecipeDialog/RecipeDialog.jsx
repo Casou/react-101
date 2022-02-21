@@ -18,19 +18,19 @@ const RecipeDialog = ({recipe, open}) => {
       })}>
         <div className={"modal-content " + styles["modal-content"]}>
           <section>
-            <img src={recipe.thumbnail} alt="Thumbnail" className={styles.thumbnail}/>
+            { recipe?.thumbnail && <img src={recipe.thumbnail} alt="Thumbnail" className={styles.thumbnail}/> }
             <p>
               Ingrédients:
             </p>
-            <Ingredients recipe={recipe} />
+            <Ingredients data={recipe?.ingredients} />
           </section>
           <section>
-            <Title recipe={recipe} />
-            <Category recipe={recipe} />
-            <Instructions recipe={recipe} />
+            <Title name={recipe?.name} source={recipe?.source} />
+            <Category name={recipe?.category} />
+            <Instructions data={recipe?.instructions} />
 
             {
-              recipe.video &&
+              recipe?.video &&
               <div className={styles["youtube-video"]}>
                 <YoutubeVideo videoLink={recipe.video} />
               </div>
@@ -51,9 +51,12 @@ const RecipeDialog = ({recipe, open}) => {
 };
 
 RecipeDialog.propTypes = {
-  recipe: DishType.isRequired,
-  open: PropTypes.bool.isRequired,
+  recipe: DishType,
+  open: PropTypes.bool,
 };
-RecipeDialog.defaultProps = {};
+RecipeDialog.defaultProps = {
+  recipe: null,
+  open: false,
+};
 
 export default RecipeDialog;

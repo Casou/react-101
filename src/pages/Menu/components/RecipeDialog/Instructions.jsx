@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import styles from "./RecipeDialog.module.css";
 import DishType from "@/types/DishType"
 
-const Instructions = ({recipe}) =>
+const Instructions = ({ data }) =>
+  data ?
   <pre className={styles["recipe-instructions"]}>
-    {recipe.instructions}
-  </pre>;
+    { data }
+  </pre>
+  : "";
 
 Instructions.propTypes = {
-  recipe: DishType.isRequired
+  data: PropTypes.string
 };
 Instructions.defaultProps = {};
 

@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from "./RecipeDialog.module.css";
-import DishType from "@/types/DishType"
 
-const Ingredients = ({recipe}) =>
+const Ingredients = ({ data }) =>
   <ul className={styles["ingredients-list"]}>
     {
-      recipe.ingredients.map((ingredient, index) =>
+      data?.map((ingredient, index) =>
         <li key={"ingredient-" + index}>{ingredient}</li>
       )}
   </ul>;
 
 Ingredients.propTypes = {
-  recipe: DishType.isRequired
+  data: PropTypes.arrayOf(PropTypes.string)
 };
 Ingredients.defaultProps = {};
 

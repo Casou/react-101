@@ -25,6 +25,10 @@
 .modal-title {
     font-size: 28px;
 }
+.modal-title-link-icon {
+    margin-left: 10px;
+    transform: rotateZ(-37deg);
+}
 .modal-sub-title {
     font-size: 24px;
 }

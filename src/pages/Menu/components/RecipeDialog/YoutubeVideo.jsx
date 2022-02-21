@@ -17,7 +17,6 @@ const YoutubeVideo = ({videoLink}) => {
 YoutubeVideo.propTypes = {
   videoLink: PropTypes.string.isRequired
 };
-YoutubeVideo.defaultProps =
-{};
+YoutubeVideo.defaultProps = {};
 
 export default YoutubeVideo;
