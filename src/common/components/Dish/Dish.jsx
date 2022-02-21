@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from "./Dish.module.css";
 
-const Dish = ({picture, children}) => {
+const Dish = ({picture, children, onClick}) => {
   return (
-    <section className={"card " + styles.card}>
+    <section className={"card " + styles.card} onClick={onClick}>
       {picture}
       <div className={"card-content " + styles["card-content"]}>
         {children}
@@ -19,6 +19,7 @@ Dish.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
+  onClick: PropTypes.func,
 };
 Dish.defaultProps = {};
 
