@@ -53,6 +53,7 @@ const RecipeDialog = ({recipe, open}) => {
 RecipeDialog.propTypes = {
   recipe: DishType,
   open: PropTypes.bool,
+  onClose: PropTypes.func,
 };
 RecipeDialog.defaultProps = {
   recipe: null,
