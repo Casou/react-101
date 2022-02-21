@@ -2,24 +2,37 @@ import PropTypes from 'prop-types';
 import styles from "./Menu.module.css";
 import DishCard from "@/common/components/DishCard";
 import DishType from "@/types/DishType";
+import {useState} from "react";
+import RecipeDialog from "./components/RecipeDialog";
 
-const Menu = ({ recipes }) => {
-    const sortedRecipes = recipes
-        .sort((a, b) => a.name.localeCompare(b.name));
+const Menu = ({recipes}) => {
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-    return (
-        <div className={styles.menu}>
-            {
-                sortedRecipes.map(recipe =>
-                    <DishCard recipe={ recipe } key={`recipe-${ recipe.id }`} />
-                )
-            }
-        </div>
-    )
+  const sortedRecipes = recipes
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  return (
+    <>
+      <RecipeDialog recipe={selectedRecipe}
+                    open={!!selectedRecipe}
+                    onClose={() => setSelectedRecipe(null)}
+      />
+      <div className={styles.menu}>
+        {
+          sortedRecipes.map(recipe =>
+            <DishCard recipe={recipe}
+                      key={`recipe-${recipe.id}`}
+                      onClick={() => setSelectedRecipe(recipe)}
+            />
+          )
+        }
+      </div>
+    </>
+  )
 }
 
 Menu.propTypes = {
-    recipes: PropTypes.arrayOf(DishType).isRequired
+  recipes: PropTypes.arrayOf(DishType).isRequired
 };
 Menu.defaultProps = {};
 

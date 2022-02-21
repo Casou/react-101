@@ -10,7 +10,7 @@ import Ingredients from "./Ingredients";
 import CloseButton from "./CloseButton";
 import classnames from "classnames";
 
-const RecipeDialog = ({recipe, open}) => {
+const RecipeDialog = ({recipe, open, onClose}) => {
   return (
     <>
       <div id="modal1" className={classnames("modal", styles.modal, {
@@ -39,7 +39,7 @@ const RecipeDialog = ({recipe, open}) => {
         </div>
 
         <div className="modal-footer">
-          <CloseButton />
+          <CloseButton onClick={onClose} />
         </div>
       </div>
 
