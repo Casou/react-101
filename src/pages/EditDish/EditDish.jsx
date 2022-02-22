@@ -1,14 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import DishType from "@/types/DishType";
 import styles from "./EditDish.module.css";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
+
+const Input = ({value, setValue}) =>
+  <div className={"input-field"}>
+    <input type="text"
+           value={value}
+           onChange={e => setValue(e.target.value)}/>
+  </div>;
 
 const EditDish = ({recipes}) => {
   const {id} = useParams();
-  const recipe = recipes.find(r => r.id === +id);
+  const navigate = useNavigate();
+  const [ recipe, setRecipe ] = useState(recipes.find(r => r.id === +id))
   if (!recipe) {
     return "Not found";
+  }
+
+  const _saveRecipe = recipe => {
+    return fetch(`/api/recipes/${recipe.id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(recipe),
+      headers: { 'Content-Type': 'application/json' }
+    }).then(() => {
+      navigate("/");
+    });
+  }
+
+  const _updateRecipe = property => value => {
+    setRecipe({ ...recipe, [property]: value })
   }
 
   return (
@@ -18,10 +40,16 @@ const EditDish = ({recipes}) => {
       </section>
       <section className={styles.form}>
         <h1>Edit recipe</h1>
-        <p>Name: { recipe.name }</p>
-        <p>Category: { recipe.category }</p>
-        <p>Thumbnail: { recipe.thumbnail }</p>
-        <p>Video: { recipe.video }</p>
+        <div>Name: <Input value={recipe.name} setValue={_updateRecipe("name")} /></div>
+        <div>Category: <Input value={recipe.category} setValue={_updateRecipe("name")} /></div>
+        <div>Thumbnail: <Input value={recipe.thumbnail} setValue={_updateRecipe("thumbnail")} /></div>
+        <div>Video: <Input value={recipe.video} setValue={_updateRecipe("video")} /></div>
+
+        <button className={ "waves-effect waves-light btn " + styles["save-button"]}
+                onClick={() => _saveRecipe(recipe)}
+        >
+          Save
+        </button>
       </section>
     </div>
   )

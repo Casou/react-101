@@ -23,3 +23,12 @@
     margin: 0 0 20px 0;
     font-size: 28px;
 }
+
+.form input[type=text]:focus {
+    border-bottom: 1px solid #ff827d !important;
+    box-shadow: 0 1px 0 0 #ff827d !important;
+}
+
+.save-button {
+    background-color: #ff827d;
+}
