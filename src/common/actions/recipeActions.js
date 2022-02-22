@@ -1,5 +1,3 @@
-import recipes from "../store/reducers/recipes";
-
 export const fetchRecipes = () => dispatch => {
   return fetch("/api/recipes")
     .then(r => r.json())

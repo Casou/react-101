@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Navigate, Routes, Route} from "react-router-dom";
+import React, {useEffect} from "react";
+import {Navigate, Route, Routes} from "react-router-dom";
 import "./App.css"
 import AppBar from "./common/components/AppBar";
 import Loader from "./common/components/Loader";
@@ -8,12 +8,13 @@ import SingleDish from "./pages/SingleDish";
 import RandomDish from "./pages/RandomDish";
 import EditDish from "./pages/EditDish";
 import {connect} from "react-redux";
-import {fetchRecipes, updateRecipe} from "./common/actions/recipeActions";
+import * as RecipeActions from "./common/actions/recipeActions";
+import {bindActionCreators} from "redux";
 
-function App({recipes, loadRecipes, saveRecipe}) {
+function App({recipes, recipeActions}) {
 
   useEffect(() => {
-    loadRecipes();
+    recipeActions.fetchRecipes();
   }, []);
 
   return (
@@ -29,7 +30,7 @@ function App({recipes, loadRecipes, saveRecipe}) {
               <Route path={"/menu"}>
                 <Route index element={<Menu recipes={recipes}/>}/>
                 <Route path={":id"} element={<SingleDish recipes={recipes}/>}/>
-                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={saveRecipe}/>}/>
+                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={recipeActions.updateRecipe}/>}/>
               </Route>
               <Route path={"/random"} element={<RandomDish recipes={recipes}/>}/>
 
@@ -45,10 +46,9 @@ const mapStateToProps = (store) => ({
   recipes: store.recipes,
 });
 
-const mapDispatchToProps = {
-  loadRecipes: fetchRecipes,
-  saveRecipe: updateRecipe,
-}
+const mapDispatchToProps = dispatch => ({
+  recipeActions: bindActionCreators(RecipeActions, dispatch)
+})
 
 export default connect(
   mapStateToProps,
