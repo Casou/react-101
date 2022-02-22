@@ -8,24 +8,13 @@ import SingleDish from "./pages/SingleDish";
 import RandomDish from "./pages/RandomDish";
 import EditDish from "./pages/EditDish";
 import {connect} from "react-redux";
-import {fetchRecipes} from "./common/actions/recipeActions";
+import {fetchRecipes, updateRecipe} from "./common/actions/recipeActions";
 
-function App({recipes, loadRecipes}) {
+function App({recipes, loadRecipes, saveRecipe}) {
 
   useEffect(() => {
     loadRecipes();
   }, []);
-
-  const _saveRecipe = recipe => {
-    return fetch(`/api/recipes/${recipe.id}`, {
-      method: 'PATCH',
-      body: JSON.stringify(recipe),
-      headers: { 'Content-Type': 'application/json' }
-    }).then(() => {
-      // We no longer can use the store
-      // setRecipes([ ...recipes.filter(r => r.id !== recipe.id), recipe ]);
-    });
-  }
 
   return (
     <div className="App">
@@ -40,7 +29,7 @@ function App({recipes, loadRecipes}) {
               <Route path={"/menu"}>
                 <Route index element={<Menu recipes={recipes}/>}/>
                 <Route path={":id"} element={<SingleDish recipes={recipes}/>}/>
-                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={_saveRecipe}/>}/>
+                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={saveRecipe}/>}/>
               </Route>
               <Route path={"/random"} element={<RandomDish recipes={recipes}/>}/>
 
@@ -57,7 +46,8 @@ const mapStateToProps = (store) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  loadRecipes: () => fetchRecipes(dispatch)
+  loadRecipes: async () => dispatch(await fetchRecipes()),
+  saveRecipe: async(recipe) => dispatch(await updateRecipe(recipe)),
 })
 
 export default connect(
