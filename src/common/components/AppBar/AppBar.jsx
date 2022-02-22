@@ -1,5 +1,4 @@
 import './AppBar.css'
-import Clock from "./Clock";
 import {NavLink} from "react-router-dom";
 
 const AppBar = () => {
@@ -19,7 +18,7 @@ const AppBar = () => {
         </ul>
 
         <div className="HeaderBar__clock">
-          <Clock />
+          Clock...
         </div>
       </div>
     </nav>
