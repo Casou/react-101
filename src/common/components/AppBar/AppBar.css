@@ -1,0 +1,55 @@
+nav {
+    height: 100px;
+    background: linear-gradient(229deg, #ff807c 0%, #ffc194 100%);
+    text-shadow: 2px 2px 2px #444;
+}
+
+.HeaderBar {
+    display: flex;
+    align-items: center;
+}
+
+.HeaderBar img {
+    height : 80px;
+    margin-left: 30px;
+}
+
+.HeaderBar__companyName {
+    margin-left: 40px;
+}
+.HeaderBar__companyName p {
+    margin: 0;
+}
+
+.HeaderBar__companyName--title {
+    font-size : 26px;
+    line-height : 26px;
+    font-weight: 700;
+    margin-bottom: 10px !important;
+}
+
+.HeaderBar__companyName--slogan {
+    font-size : 16px;
+    line-height : 16px;
+}
+
+.HeaderBar__clock {
+    margin-right: 30px;
+    font-size: 25px;
+}
+
+#header__navigationLinks {
+    flex: 1;
+    margin-left: 30px;
+}
+
+#header__navigationLinks li {
+    display: inline-block;
+    margin: 0 15px;
+}
+#header__navigationLinks li a {
+    font-size: 20px;
+}
+#header__navigationLinks li a.selected {
+    text-decoration: underline;
+}

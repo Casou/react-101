@@ -1,0 +1,11 @@
+.content {
+    text-align: center;
+}
+
+.content section {
+    margin: 20px auto;
+}
+
+.next-button {
+    background-color: #ff827d;
+}

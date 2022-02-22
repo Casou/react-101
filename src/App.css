@@ -1,0 +1,11 @@
+main {
+}
+
+.class-to-remove {
+    margin-left: 50px;
+}
+
+.class-to-remove pre {
+    width: 550px;
+    white-space: break-spaces;
+}

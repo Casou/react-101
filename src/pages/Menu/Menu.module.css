@@ -1,0 +1,17 @@
+.menu {
+    margin : 10px 15px;
+    font-size : 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.filter-input {
+    width: 600px;
+    margin: auto;
+}
+
+.filter-input input[type=text]:focus {
+    border-bottom: 1px solid #ff827d !important;
+    box-shadow: 0 1px 0 0 #ff827d !important;
+}
