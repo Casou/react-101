@@ -1,0 +1,1 @@
+// Create the initial store here and call redux methods
