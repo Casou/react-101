@@ -9,13 +9,9 @@ import DishType from "@/types/DishType";
 import {bindActionCreators} from "redux";
 import * as RecipeActions from "../actions/recipeActions";
 import {connect} from "react-redux";
-import Loader from "./Loader";
+import withLoading from "@/common/hoc/withLoading";
 
 const Body = ({ recipes, recipeActions }) => {
-  if (!recipes) {
-    return <Loader/>;
-  }
-
   return (
     <Routes>
       <Route path={"/menu"}>
@@ -47,4 +43,5 @@ Body.defaultProps = {};
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Body);
+)(
+  withLoading(Body));
