@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {useParams} from "react-router-dom";
 import DishType from "@/types/DishType";
 import DishCard from "@/common/components/DishCard";
+import styles from "./SingleDish.module.css";
 
 const SingleDish = ({ recipes }) => {
   const { id } = useParams()
@@ -12,7 +13,7 @@ const SingleDish = ({ recipes }) => {
   }
 
   return (
-    <div>
+    <div className={styles.content}>
       <DishCard recipe={recipe} />
     </div>
   );

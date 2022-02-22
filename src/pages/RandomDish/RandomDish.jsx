@@ -13,7 +13,7 @@ const RandomDish = ({recipes}) => {
     <div className={styles.content}>
       <DishCard recipe={recipe}/>
 
-      <button className="waves-effect waves-light btn"
+      <button className={ "waves-effect waves-light btn " + styles["next-button"]}
               onClick={() => setRecipeId(randomId(recipes))}
       >
         Next

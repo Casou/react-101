@@ -9,6 +9,7 @@ import Instructions from "./Instructions";
 import Ingredients from "./Ingredients";
 import CloseButton from "./CloseButton";
 import classnames from "classnames";
+import EditIcon from "./EditIcon";
 
 const RecipeDialog = ({recipe, open, onClose}) => {
   return (
@@ -25,6 +26,8 @@ const RecipeDialog = ({recipe, open, onClose}) => {
             <Ingredients data={recipe?.ingredients} />
           </section>
           <section>
+            { recipe && <EditIcon recipeId={recipe.id} /> }
+
             <Title name={recipe?.name} source={recipe?.source} />
             <Category name={recipe?.category} />
             <Instructions data={recipe?.instructions} />

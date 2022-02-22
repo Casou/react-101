@@ -60,3 +60,8 @@
 .youtube-video {
     text-align: center;
 }
+
+.modal-edit-icon {
+    position: absolute;
+    right: 15px;
+}

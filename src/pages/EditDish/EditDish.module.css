@@ -1,0 +1,25 @@
+.content {
+    width: 800px;
+    margin: 40px auto;
+}
+
+.thumbnail {
+    display: inline-block;
+    width: 250px;
+}
+.thumbnail img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.form {
+    width: 530px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.form h1 {
+    margin: 0 0 20px 0;
+    font-size: 28px;
+}
