@@ -10,6 +10,7 @@ import EditDish from "./pages/EditDish";
 import {connect} from "react-redux";
 import * as RecipeActions from "./common/actions/recipeActions";
 import {bindActionCreators} from "redux";
+import Body from "./common/components/Body";
 
 function App({recipes, recipeActions}) {
 
@@ -23,34 +24,17 @@ function App({recipes, recipeActions}) {
         <AppBar/>
       </header>
       <main>
-        {
-          !recipes ?
-            <Loader/> :
-            <Routes>
-              <Route path={"/menu"}>
-                <Route index element={<Menu recipes={recipes}/>}/>
-                <Route path={":id"} element={<SingleDish recipes={recipes}/>}/>
-                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={recipeActions.updateRecipe}/>}/>
-              </Route>
-              <Route path={"/random"} element={<RandomDish recipes={recipes}/>}/>
-
-              <Route path="*" element={<Navigate to="/menu" replace/>}/>
-            </Routes>
-        }
+        <Body />
       </main>
     </div>
   )
 }
-
-const mapStateToProps = (store) => ({
-  recipes: store.recipes,
-});
 
 const mapDispatchToProps = dispatch => ({
   recipeActions: bindActionCreators(RecipeActions, dispatch)
 })
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(App)
