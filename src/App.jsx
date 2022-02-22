@@ -17,6 +17,16 @@ function App() {
       .then(setRecipes);
   }, []);
 
+  const _saveRecipe = recipe => {
+    return fetch(`/api/recipes/${recipe.id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(recipe),
+      headers: { 'Content-Type': 'application/json' }
+    }).then(() => {
+      setRecipes([ ...recipes.filter(r => r.id !== recipe.id), recipe ]);
+    });
+  }
+
   return (
     <div className="App">
       <header>
@@ -30,7 +40,7 @@ function App() {
               <Route path={"/menu"}>
                 <Route index element={<Menu recipes={recipes} />} />
                 <Route path={":id"} element={<SingleDish recipes={recipes} />} />
-                <Route path={"edit/:id"} element={<EditDish recipes={recipes} />} />
+                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={_saveRecipe} />} />
               </Route>
               <Route path={"/random"} element={<RandomDish recipes={recipes} />} />
 
