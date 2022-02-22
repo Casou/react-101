@@ -45,10 +45,10 @@ const mapStateToProps = (store) => ({
   recipes: store.recipes,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  loadRecipes: async () => dispatch(await fetchRecipes()),
-  saveRecipe: async(recipe) => dispatch(await updateRecipe(recipe)),
-})
+const mapDispatchToProps = {
+  loadRecipes: fetchRecipes,
+  saveRecipe: updateRecipe,
+}
 
 export default connect(
   mapStateToProps,
