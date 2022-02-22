@@ -6,7 +6,7 @@ import thunk from "redux-thunk";
 import reducers from "./reducers"
 
 const initialStore = {
-  recipes: [],
+  recipes: null,
 };
 
 const store = createStore(reducers, initialStore,
