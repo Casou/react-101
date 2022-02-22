@@ -7,14 +7,13 @@ import Menu from "./pages/Menu";
 import SingleDish from "./pages/SingleDish";
 import RandomDish from "./pages/RandomDish";
 import EditDish from "./pages/EditDish";
+import {connect} from "react-redux";
+import {fetchRecipes} from "./common/actions/recipeActions";
 
-function App() {
-  const [ recipes, setRecipes ] = useState(null);
+function App({recipes, loadRecipes}) {
 
   useEffect(() => {
-    fetch("/api/recipes")
-      .then(r => r.json())
-      .then(setRecipes);
+    loadRecipes();
   }, []);
 
   const _saveRecipe = recipe => {
@@ -23,28 +22,29 @@ function App() {
       body: JSON.stringify(recipe),
       headers: { 'Content-Type': 'application/json' }
     }).then(() => {
-      setRecipes([ ...recipes.filter(r => r.id !== recipe.id), recipe ]);
+      // We no longer can use the store
+      // setRecipes([ ...recipes.filter(r => r.id !== recipe.id), recipe ]);
     });
   }
 
   return (
     <div className="App">
       <header>
-        <AppBar />
+        <AppBar/>
       </header>
       <main>
         {
           !recipes ?
-            <Loader /> :
+            <Loader/> :
             <Routes>
               <Route path={"/menu"}>
-                <Route index element={<Menu recipes={recipes} />} />
-                <Route path={":id"} element={<SingleDish recipes={recipes} />} />
-                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={_saveRecipe} />} />
+                <Route index element={<Menu recipes={recipes}/>}/>
+                <Route path={":id"} element={<SingleDish recipes={recipes}/>}/>
+                <Route path={"edit/:id"} element={<EditDish recipes={recipes} onSave={_saveRecipe}/>}/>
               </Route>
-              <Route path={"/random"} element={<RandomDish recipes={recipes} />} />
+              <Route path={"/random"} element={<RandomDish recipes={recipes}/>}/>
 
-              <Route path="*" element={<Navigate to="/menu" replace />} />
+              <Route path="*" element={<Navigate to="/menu" replace/>}/>
             </Routes>
         }
       </main>
@@ -52,4 +52,15 @@ function App() {
   )
 }
 
-export default App
+const mapStateToProps = (store) => ({
+  recipes: store.recipes,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  loadRecipes: () => fetchRecipes(dispatch)
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
