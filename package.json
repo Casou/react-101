@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "run-p start:front start:server",
-    "start:server": "json-server -p 3001 data/people.json",
+    "start:server": "json-server -p 3001 data/recipes.json",
     "start:front": "vite",
     "build": "vite build",
     "preview": "vite preview"
