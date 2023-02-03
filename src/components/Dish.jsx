@@ -63,12 +63,12 @@ const Tags = ({ dish }) => {
   return (
     <p>
       Tags : {
-        dish.tags
-          .filter(tag => tag !== "Baking")
-          .map(tag => `#${ tag.toLowerCase() }`)
-          .sort()
-          .join(" ")
-      }
+      dish.tags
+        .filter((tag, index) => tag !== "Baking" && dish.tags.findIndex(t => t === tag) === index)
+        .map(tag => `#${ tag.toLowerCase() }`)
+        .sort()
+        .join(" ")
+    }
     </p>
   )
 }
