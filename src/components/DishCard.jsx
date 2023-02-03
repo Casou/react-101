@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dish from "./Dish";
-import DishType from "./DishPropType";
+import DishType from "./DishPropTypes";
 
 const DishCard = ({ recipe }) => {
     return (
