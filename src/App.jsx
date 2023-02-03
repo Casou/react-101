@@ -12,7 +12,7 @@ import * as RecipeActions from "./common/actions/recipeActions";
 import {bindActionCreators} from "redux";
 import Body from "./common/components/Body";
 
-function App({recipes, recipeActions}) {
+function App({recipeActions}) {
 
   useEffect(() => {
     recipeActions.fetchRecipes();
