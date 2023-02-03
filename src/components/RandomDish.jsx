@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import Dish from "./Dish";
+import DishType from "./DishPropTypes";
 
 const RandomDish = ({recipes}) => {
   const [dishId, setDishId] = useState(Math.floor(Math.random() * recipes.length));
@@ -28,7 +29,7 @@ const RandomDish = ({recipes}) => {
 }
 
 RandomDish.propTypes = {
-  recipes: PropTypes.array.isRequired,
+  recipes: PropTypes.arrayOf(DishType).isRequired,
 };
 RandomDish.defaultProps = {};
 
