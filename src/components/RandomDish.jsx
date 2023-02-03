@@ -8,12 +8,12 @@ const RandomDish = ({recipes}) => {
   const randomDish = recipes[dishId];
 
   return (
-    <Dish picture={<Dish.Picture dish={randomDish}/>}>
-      <Dish.Title dish={randomDish}/>
-      <Dish.Category dish={randomDish}/>
-      <Dish.VideoLink dish={randomDish}/>
-      <Dish.ThumbnailLink dish={randomDish}/>
-      <Dish.Tags dish={randomDish}/>
+    <Dish picture={<Dish.Picture thumbnail={randomDish.thumbnail}/>}>
+      <Dish.Title>{ randomDish.name }</Dish.Title>
+      <Dish.Category>{ randomDish.category }</Dish.Category>
+      <Dish.VideoLink link={randomDish.video}/>
+      <Dish.ThumbnailLink link={randomDish.thumbnail}/>
+      <Dish.Tags tags={randomDish.tags}/>
     </Dish>
   )
 }
