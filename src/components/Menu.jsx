@@ -5,33 +5,33 @@ import Dish from "./Dish";
 const Menu = ({recipes}) => {
     return (
         <div className="menu">
-            <Dish picture={<Dish.Picture dish={recipes[0]}/>}>
-                <Dish.Title dish={recipes[0]}/>
-                <Dish.Category dish={recipes[0]}/>
-                <Dish.VideoLink dish={recipes[0]}/>
-                <Dish.ThumbnailLink dish={recipes[0]}/>
-                <Dish.Tags dish={recipes[0]}/>
+            <Dish picture={<Dish.Picture thumbnail={recipes[0].thumbnail}/>}>
+                <Dish.Title>{ recipes[0].name }</Dish.Title>
+                <Dish.Category>{ recipes[0].category }</Dish.Category>
+                <Dish.VideoLink link={recipes[0].video}/>
+                <Dish.ThumbnailLink link={recipes[0].thumbnail}/>
+                <Dish.Tags tags={recipes[0].tags}/>
             </Dish>
-            <Dish picture={<Dish.Picture dish={recipes[1]}/>}>
-                <Dish.Title dish={recipes[1]}/>
-                <Dish.Category dish={recipes[1]}/>
-                <Dish.VideoLink dish={recipes[1]}/>
-                <Dish.ThumbnailLink dish={recipes[1]}/>
-                <Dish.Tags dish={recipes[1]}/>
+            <Dish picture={<Dish.Picture thumbnail={recipes[1].thumbnail}/>}>
+                <Dish.Title>{ recipes[1].name }</Dish.Title>
+                <Dish.Category>{ recipes[1].category }</Dish.Category>
+                <Dish.VideoLink link={recipes[1].video}/>
+                <Dish.ThumbnailLink link={recipes[1].thumbnail}/>
+                <Dish.Tags tags={recipes[1].tags}/>
             </Dish>
-            <Dish picture={<Dish.Picture dish={recipes[2]}/>}>
-                <Dish.Title dish={recipes[2]}/>
-                <Dish.Category dish={recipes[2]}/>
-                <Dish.VideoLink dish={recipes[2]}/>
-                <Dish.ThumbnailLink dish={recipes[2]}/>
-                <Dish.Tags dish={recipes[2]}/>
+            <Dish picture={<Dish.Picture thumbnail={recipes[2].thumbnail}/>}>
+                <Dish.Title>{ recipes[2].name }</Dish.Title>
+                <Dish.Category>{ recipes[2].category }</Dish.Category>
+                <Dish.VideoLink link={recipes[2].video}/>
+                <Dish.ThumbnailLink link={recipes[2].thumbnail}/>
+                <Dish.Tags tags={recipes[2].tags}/>
             </Dish>
-            <Dish picture={<Dish.Picture dish={recipes[3]}/>}>
-                <Dish.Title dish={recipes[3]}/>
-                <Dish.Category dish={recipes[3]}/>
-                <Dish.VideoLink dish={recipes[3]}/>
-                <Dish.ThumbnailLink dish={recipes[3]}/>
-                <Dish.Tags dish={recipes[3]}/>
+            <Dish picture={<Dish.Picture thumbnail={recipes[3].thumbnail}/>}>
+                <Dish.Title>{ recipes[3].name }</Dish.Title>
+                <Dish.Category>{ recipes[3].category }</Dish.Category>
+                <Dish.VideoLink link={recipes[3].video}/>
+                <Dish.ThumbnailLink link={recipes[3].thumbnail}/>
+                <Dish.Tags tags={recipes[3].tags}/>
             </Dish>
         </div>
     )
