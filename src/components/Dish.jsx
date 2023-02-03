@@ -2,26 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "./Dish.css";
 
-const Picture = ({ dish }) => {
+const Picture = ({ thumbnail }) => {
   return (
     <div className="card-image">
-      <img src={ dish.thumbnail } alt="Thumbnail" />
+      <img src={ thumbnail } alt="Thumbnail" />
     </div>
   )
 }
 
-const Title = ({ dish }) => {
+const Title = ({ children }) => {
   return (
     <div className="card-title">
-      { dish.name }
+      { children }
     </div>
   )
 }
 
-const Category = ({ dish }) => {
+const Category = ({ children }) => {
   return (
     <div className="card-sub-title">
-      { dish.category }
+      { children }
     </div>
   )
 }
@@ -39,27 +39,27 @@ const Link = ({ icon, title, href, text }) => {
   )
 }
 
-const VideoLink = ({ dish }) => {
+const VideoLink = ({ link }) => {
   return (
     <Link icon={"ondemand_video"}
           title={"Youtube link"}
-          href={dish.video}
+          href={link}
           text={"Video"}
     />
   )
 }
 
-const ThumbnailLink = ({ dish }) => {
+const ThumbnailLink = ({ link }) => {
   return (
     <Link icon={"photo_camera"}
           title={"Thumbnail"}
-          href={dish.thumbnail}
+          href={link}
           text={"Picture"}
     />
   )
 }
 
-const Tags = ({ dish }) => {
+const Tags = ({ tags }) => {
   return (
     <p>
       Tags : ...
@@ -69,7 +69,7 @@ const Tags = ({ dish }) => {
 
 const Dish = ({ picture, children }) => {
   return (
-    <section className="card dish-card">
+    <section className="card">
       { picture }
       <div className="card-content">
         { children }
