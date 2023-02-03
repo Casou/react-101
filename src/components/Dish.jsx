@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "./Dish.css";
 
-const Picture = ({ thumbnail }) => {
+const Picture = ({ src }) => {
   return (
     <div className="card-image">
-      <img src={ thumbnail } alt="Thumbnail" />
+      <img src={ src } alt="Thumbnail" />
     </div>
   )
 }

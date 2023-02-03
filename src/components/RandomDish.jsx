@@ -8,7 +8,7 @@ const RandomDish = ({recipes}) => {
   const randomDish = recipes[dishId];
 
   return (
-    <Dish picture={<Dish.Picture thumbnail={randomDish.thumbnail}/>}>
+    <Dish picture={<Dish.Picture src={randomDish.thumbnail}/>}>
       <Dish.Title>{ randomDish.name }</Dish.Title>
       <Dish.Category>{ randomDish.category }</Dish.Category>
       <Dish.VideoLink link={randomDish.video}/>
