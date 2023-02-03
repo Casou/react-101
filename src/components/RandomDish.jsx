@@ -45,9 +45,7 @@ class RandomDish extends React.Component {
   }
 }
 
-RandomDish.propTypes = {
-  recipes: PropTypes.array.isRequired,
-};
+RandomDish.propTypes = {};
 RandomDish.defaultProps = {};
 
 export default RandomDish;
