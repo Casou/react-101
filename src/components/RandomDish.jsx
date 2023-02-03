@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dish from "./Dish";
+import DishType from "./DishPropTypes";
 
 const RandomDish = ({recipes}) => {
   // Fix the dish id for the exercise
@@ -19,7 +20,7 @@ const RandomDish = ({recipes}) => {
 }
 
 RandomDish.propTypes = {
-  recipes: PropTypes.array.isRequired,
+  recipes: PropTypes.arrayOf(DishType).isRequired,
 };
 RandomDish.defaultProps = {};
 

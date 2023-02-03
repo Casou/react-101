@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import "./Menu.css";
 import RandomDish from "./RandomDish";
+import DishType from "./DishPropTypes";
 
 const Menu = ({ recipes }) => {
   return (
@@ -10,7 +11,9 @@ const Menu = ({ recipes }) => {
   )
 }
 
-Menu.propTypes = {};
+Menu.propTypes = {
+  recipes: PropTypes.arrayOf(DishType).isRequired
+};
 Menu.defaultProps = {};
 
 export default Menu;
