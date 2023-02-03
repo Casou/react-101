@@ -4,12 +4,12 @@ import Dish from "./Dish";
 
 const DishCard = ({ recipe }) => {
     return (
-        <Dish picture={<Dish.Picture dish={recipe}/>}>
-            <Dish.Title dish={recipe}/>
-            <Dish.Category dish={recipe}/>
-            <Dish.VideoLink dish={recipe}/>
-            <Dish.ThumbnailLink dish={recipe}/>
-            { !!recipe.tags.length && <Dish.Tags dish={recipe}/> }
+        <Dish picture={<Dish.Picture src={recipe.thumbnail}/>}>
+            <Dish.Title>{ recipe.name }</Dish.Title>
+            <Dish.Category>{ recipe.category }</Dish.Category>
+            <Dish.VideoLink link={recipe.video}/>
+            <Dish.ThumbnailLink link={recipe.thumbnail}/>
+            { !!recipe.tags.length && <Dish.Tags tags={recipe.tags}/> }
         </Dish>
     );
 };
