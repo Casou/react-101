@@ -2,35 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import "./Dish.css";
 
-const Picture = ({dish}) => {
+const Picture = ({src}) => {
     return (
         <div className="card-image">
-            <img src={dish.thumbnail} alt="Thumbnail"/>
+            <img src={src} alt="Thumbnail"/>
         </div>
     )
 }
 
-const Title = ({dish}) => {
+const Title = ({children}) => {
     return (
         <div className="card-title">
-            {dish.name}
+            {children}
         </div>
     )
 }
 
-const Category = ({dish}) => {
+const Category = ({children}) => {
     return (
         <div className="card-sub-title">
-            {dish.category}
+            {children}
         </div>
     )
 }
 
-const Link = ({icon, title, href, text}) => {
+const Link = ({icon, title, href, children}) => {
     return (
         <IconedText icon={icon} title={title}>
             <a href={href} target="_blank">
-                {text}
+                {children}
             </a>
         </IconedText>
     )
@@ -46,8 +46,8 @@ const IconedText = ({icon, title, children}) => {
     )
 }
 
-const VideoLink = ({dish}) => {
-    if (!dish.video) {
+const VideoLink = ({link}) => {
+    if (!link) {
         return (
             <IconedText icon={"ondemand_video"}
                         title={"Youtube link"}>
@@ -58,27 +58,29 @@ const VideoLink = ({dish}) => {
     return (
         <Link icon={"ondemand_video"}
               title={"Youtube link"}
-              href={dish.video}
-              text={"Video"}
-        />
+              href={link}
+        >
+          Video
+        </Link>
     )
 }
 
-const ThumbnailLink = ({dish}) => {
+const ThumbnailLink = ({link}) => {
     return (
         <Link icon={"photo_camera"}
               title={"Thumbnail"}
-              href={dish.thumbnail}
-              text={"Picture"}
-        />
+              href={link}
+        >
+          Picture
+        </Link>
     )
 }
 
-const Tags = ({dish}) => {
+const Tags = ({tags}) => {
     return (
         <p>
             Tags : {
-            dish.tags
+            tags
                 .filter(tag => tag !== "Baking")
                 .map(tag => `#${tag.toLowerCase()}`)
                 .sort()
