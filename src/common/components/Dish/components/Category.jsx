@@ -1,19 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from "../Dish.module.css";
-import DishType from "@/types/DishType";
 
-const Category = ({ dish }) => {
+const Category = ({ children }) => {
   return (
     <div className={"card-sub-title " + styles["card-sub-title"]}>
-      {dish.category}
+      {children}
     </div>
   )
 };
 
-Category.propTypes = {
-  dish: DishType.isRequired,
-};
+Category.propTypes = {};
 Category.defaultProps = {};
 
 export default Category;
