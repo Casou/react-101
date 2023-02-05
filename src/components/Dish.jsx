@@ -89,6 +89,16 @@ const Tags = ({tags}) => {
         </p>
     )
 }
+const Calories = ({ caloryCount }) => {
+  return (
+    <IconedText icon={"restaurant_menu"}
+                title={"Calories"}
+    >
+      Calories: { caloryCount } Kcal
+    </IconedText>
+  )
+}
+
 
 const Dish = ({picture, children}) => {
     return (
@@ -107,6 +117,7 @@ Dish.Category = Category;
 Dish.VideoLink = VideoLink;
 Dish.ThumbnailLink = ThumbnailLink;
 Dish.Tags = Tags;
+Dish.Calories = Calories;
 
 Dish.propTypes = {};
 Dish.defaultProps = {};
