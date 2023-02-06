@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DishType from "@/types/DishType";
+import DishType from "../../../../types/DishType";
 import styles from "./RecipeDialog.module.css";
 import YoutubeVideo from "./YoutubeVideo";
 import Title from "./Title";

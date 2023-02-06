@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DishLink from "./DishLink";
 import IconedText from "./IconedText";
-import DishType from "@/types/DishType";
 
 const VideoLink = ({link}) => {
   if (!link) {

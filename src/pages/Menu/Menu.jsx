@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from "./Menu.module.css";
-import DishCard from "@/common/components/DishCard";
-import DishType from "@/types/DishType";
+import DishCard from "../../common/components/DishCard";
+import DishType from "../../types/DishType";
 
 const Menu = ({ recipes }) => {
     const sortedRecipes = recipes
