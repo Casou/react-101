@@ -11,10 +11,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       },
-    },
-    test: {
-      globals: true,
-      environment: "jsdom",
-      setupFiles: "./src/__tests__/setup.js",
     }
-  })
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./src/__tests__/setup.js",
+  }
+})
