@@ -3,6 +3,7 @@
     min-height: 180px;
     margin: 15px;
     font-size: 16px;
+    text-align: left;
 }
 
 .card__clickable {
