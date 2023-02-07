@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Dish from "./Dish";
-import DishType from "@/types/DishType";
+import Dish, {Calories, Category, Picture, Tags, ThumbnailLink, Title, VideoLink} from "./Dish";
+import DishType from "../../types/DishType"
+import caloryUtils from "../../utils/caloryUtils"
 
 const DishCard = ({recipe, onClick}) => {
   return (
-    <Dish picture={<Dish.Picture dish={recipe}/>} onClick={onClick}>
-      <Dish.Title dish={recipe}/>
-      <Dish.Category dish={recipe}/>
-      <Dish.VideoLink dish={recipe}/>
-      <Dish.ThumbnailLink dish={recipe}/>
-      {!!recipe.tags.length && <Dish.Tags dish={recipe}/>}
+    <Dish picture={<Picture src={recipe.thumbnail} />} onClick={onClick}>
+      <Title>{ recipe.name }</Title>
+      <Category>{ recipe.category }</Category>
+      <VideoLink link={recipe.video}/>
+      <ThumbnailLink link={recipe.thumbnail}/>
+      <Calories caloryCount={ caloryUtils.calculateCalories(recipe) } />
+      { !!recipe.tags.length && <Tags tags={recipe.tags}/> }
     </Dish>
   );
 };

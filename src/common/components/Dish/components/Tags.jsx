@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DishType from "@/types/DishType";
 
 const FORBIDDEN_TAG = "Baking";
 
-const Tags = ({ dish }) => {
+const Tags = ({ tags }) => {
   return (
     <p>
       Tags : {
-        dish.tags
+        tags
           .filter(tag => tag !== FORBIDDEN_TAG)
           .map(tag => `#${tag.toLowerCase()}`)
           .sort()
@@ -19,7 +18,7 @@ const Tags = ({ dish }) => {
 };
 
 Tags.propTypes = {
-  dish: DishType.isRequired
+  tags: PropTypes.arrayOf(PropTypes.string)
 };
 Tags.defaultProps = {};
 

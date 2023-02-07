@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DishLink from "./DishLink";
 import IconedText from "./IconedText";
-import DishType from "@/types/DishType";
 
-const VideoLink = ({dish}) => {
-  if (!dish.video) {
+const VideoLink = ({link}) => {
+  if (!link) {
     return (
       <IconedText icon={"ondemand_video"}
                   title={"Youtube link"}>
@@ -16,14 +15,14 @@ const VideoLink = ({dish}) => {
   return (
     <DishLink icon={"ondemand_video"}
               title={"Youtube link"}
-              href={dish.video}
+              href={link}
               text={"Video"}
     />
   )
 };
 
 VideoLink.propTypes = {
-  dish: DishType.isRequired,
+  link: PropTypes.string,
 };
 VideoLink.defaultProps = {};
 

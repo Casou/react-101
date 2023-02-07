@@ -1,19 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DishLink from "./DishLink";
-import DishType from "@/types/DishType"
 
-const ThumbnailLink = ({dish}) => {
+const ThumbnailLink = ({link}) => {
   return (
     <DishLink icon={"photo_camera"}
               title={"Thumbnail"}
-              href={dish.thumbnail}
+              href={link}
               text={"Picture"}
     />
   )
 };
 
 ThumbnailLink.propTypes = {
-  dish: DishType.isRequired,
+  link: PropTypes.string.isRequired,
 };
 ThumbnailLink.defaultProps = {};
 

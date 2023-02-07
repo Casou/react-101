@@ -1,8 +1,8 @@
 import './AppBar.css'
+import Clock from "./Clock";
 import {NavLink} from "react-router-dom";
-import withClock from "@/common/hoc/withClock";
 
-const AppBar = ({ time }) => {
+const AppBar = () => {
   return (
     <nav>
       <div className="nav-wrapper HeaderBar">
@@ -19,11 +19,11 @@ const AppBar = ({ time }) => {
         </ul>
 
         <div className="HeaderBar__clock">
-          { time }
+          <Clock />
         </div>
       </div>
     </nav>
   );
 };
 
-export default withClock(AppBar);
+export default AppBar;

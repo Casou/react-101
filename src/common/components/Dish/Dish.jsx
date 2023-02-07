@@ -7,9 +7,13 @@ const Dish = ({picture, children, onClick}) => {
   return (
     <section onClick={onClick}
              className={
-               classnames("card", styles.card, {
-                 [styles["card__clickable"]]: !!onClick
-               })}
+               classnames(
+                 "card",
+                 styles.card,
+                 {
+                   [styles["card__clickable"]]: !!onClick
+                 }
+               )}
     >
       {picture}
       <div className={"card-content " + styles["card-content"]}>

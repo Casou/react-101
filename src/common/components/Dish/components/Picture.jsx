@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DishType from "@/types/DishType";
 
-const Picture = ({ dish }) => {
+const Picture = ({ src }) => {
   return (
     <div className="card-image">
-      <img src={dish.thumbnail} alt="Thumbnail"/>
+      <img src={src} alt="Thumbnail"/>
     </div>
   )
 };
 
 Picture.propTypes = {
-  dish: DishType.isRequired,
+  src: PropTypes.string.isRequired,
 };
 Picture.defaultProps = {};
 

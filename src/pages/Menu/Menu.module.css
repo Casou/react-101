@@ -11,6 +11,7 @@
     margin: auto;
 }
 
+/* label underline focus color */
 .filter-input input[type=text]:focus {
     border-bottom: 1px solid #ff827d !important;
     box-shadow: 0 1px 0 0 #ff827d !important;

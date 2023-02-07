@@ -1,19 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from "../Dish.module.css";
-import DishType from "@/types/DishType";
 
-const Title = ({ dish }) => {
+const Title = ({ children }) => {
   return (
     <div className={"card-title " + styles["card-title"]}>
-      {dish.name}
+      {children}
     </div>
   )
 };
 
-Title.propTypes = {
-  dish: DishType.isRequired,
-};
+Title.propTypes = {};
 Title.defaultProps = {};
 
 export default Title;
