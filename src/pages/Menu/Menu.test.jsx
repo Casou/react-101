@@ -12,6 +12,24 @@ const expectDialogToBeVisible = (container, shouldBeVisible) => {
 
 describe("Menu tests", () => {
 
+  it("should display one card by recipe", () => {
+      // Given
+      const recipes = [
+        { id: 1, name: "My Recipe", instructions: "N/A", tags: [] },
+        { id: 2, name: "My second recipe", instructions: "N/A", tags: [] },
+      ]
+
+      // When
+      const {getAllByRole} = render(
+        <Menu recipes={recipes} />
+      )
+
+      // Then
+      const allThumbnail = getAllByRole("img")
+      expect(allThumbnail).toHaveLength(2)
+    }
+  )
+
   it("should display (apply css class) RecipeDialog when clicking on a card", async () => {
       // Given
       const recipes = [
