@@ -1,0 +1,22 @@
+// Vitest Snapshot v1
+
+exports[`Dish tests > VideoLink tests > should match snapshot 1`] = `
+<div
+  className="card-info"
+>
+  <i
+    className="material-icons material-icons"
+    title="Youtube link"
+  >
+    ondemand_video
+  </i>
+  <span>
+    <a
+      href="http://www.my-link.com"
+      target="_blank"
+    >
+      Video
+    </a>
+  </span>
+</div>
+`;
