@@ -1,7 +1,7 @@
 import {render} from "@testing-library/react"
 import DishCard from "./DishCard"
 
-describe("Dish tests", () => {
+describe("DishCard tests", () => {
 
   it("should display a video link if the recipe has one", () => {
     const recipe = {
