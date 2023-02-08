@@ -4,11 +4,11 @@ import SingleDish from "./SingleDish"
 
 describe("SingleDish tests", () => {
 
-  const createRouter = (recipes, recipeId) => {
+  const createRouter = (recipeId) => {
     const routes = [
       {
         path: "/menu/:id",
-        element: <SingleDish recipes={recipes} />,
+        element: <SingleDish/>,
       },
     ];
     return createMemoryRouter(routes, {
@@ -19,10 +19,7 @@ describe("SingleDish tests", () => {
 
   it("should display the asked recipe", () => {
     // Given
-    const recipes = [
-      { id: 1, name: "My Recipe", instructions: "N/A", tags: [] }
-    ]
-    const router = createRouter(recipes, 1)
+    const router = createRouter(52976)
 
     // When
     const {getByText} = render(
@@ -30,6 +27,6 @@ describe("SingleDish tests", () => {
     )
 
     // Then
-    expect(getByText(/My Recipe/i)).toBeInTheDocument()
+    expect(getByText(/Cashew Ghoriba Biscuits/i)).toBeInTheDocument()
   })
 })
