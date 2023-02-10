@@ -12,8 +12,8 @@ const AppBar = () => {
         </div>
 
         <ul id={"header__navigationLinks"}>
-          <li><a to={'/menu'}>Menu</a></li>
-          <li><a to={'/random'}>Random</a></li>
+          <li><a>Menu</a></li>
+          <li><a>Random</a></li>
         </ul>
 
         <div className="HeaderBar__clock">
