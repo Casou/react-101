@@ -7,7 +7,6 @@ import RecipeDialog from "./components/RecipeDialog";
 
 const Menu = ({recipes}) => {
     const [selectedRecipe, setSelectedRecipe] = useState(null);
-    const [filter, setFilter] = useState("");
 
     const sortedRecipes = recipes
       .sort((a, b) => a.name.localeCompare(b.name));
@@ -20,7 +19,7 @@ const Menu = ({recipes}) => {
           />
 
           <div className={"input-field " + styles["filter-input"]}>
-            <input placeholder="Filter dish" type="text" value={filter} onChange={e => setFilter(e.target.value)} />
+            <input placeholder="Filter dish" type="text" />
           </div>
 
           <div className={styles.menu}>
